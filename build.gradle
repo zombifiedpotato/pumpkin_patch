@@ -28,6 +28,11 @@ repositories {
 		content { includeGroup "com.jamieswhiteshirt" } }
 	maven { url "https://maven.shedaniel.me/" }
 	maven { url "https://maven.terraformersmc.com/" }
+	// for botania
+	maven { name = "Jared"
+		url = uri("https://maven.blamejared.com/")
+		content { includeGroup("vazkii.botania")
+			includeGroup("vazkii.patchouli") } }
 }
 
 dependencies {
@@ -40,6 +45,7 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	modImplementation "software.bernie.geckolib:geckolib-fabric-1.18:${geckolib_version}"
 	modImplementation "com.github.apace100:origins-fabric:${origins_version}"
+	modImplementation "vazkii.botania:Botania:${botania_version}"
 }
 
 processResources {
