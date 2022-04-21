@@ -17,3 +17,4 @@ If you have any suggestions let me know!
 
 - Explorer dimension which resets every x time (same generation as Overworld)
 - Add the pumpkin Patch datapack to the mod
+- Add Custom origins wich can acces specific mods
