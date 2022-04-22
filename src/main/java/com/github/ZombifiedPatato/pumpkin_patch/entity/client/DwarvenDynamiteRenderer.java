@@ -1,5 +1,6 @@
-package net.zombified_patato.pumpkin_patch.entity.client;
+package com.github.ZombifiedPatato.pumpkin_patch.entity.client;
 
+import com.github.ZombifiedPatato.pumpkin_patch.block.ModBlocks;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.VertexConsumerProvider;
@@ -9,8 +10,7 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3f;
-import net.zombified_patato.pumpkin_patch.block.ModBlocks;
-import net.zombified_patato.pumpkin_patch.entity.custom.DwarvenDynamiteEntity;
+import com.github.ZombifiedPatato.pumpkin_patch.entity.custom.DwarvenDynamiteEntity;
 
 public class DwarvenDynamiteRenderer extends EntityRenderer<DwarvenDynamiteEntity> {
 

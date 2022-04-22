@@ -1,7 +1,7 @@
-package net.zombified_patato.pumpkin_patch.mixin;
+package com.github.ZombifiedPatato.pumpkin_patch.mixin;
 
 import net.minecraft.client.gui.screen.TitleScreen;
-import net.zombified_patato.pumpkin_patch.PumpkinPatch;
+import com.github.ZombifiedPatato.pumpkin_patch.PumpkinPatch;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

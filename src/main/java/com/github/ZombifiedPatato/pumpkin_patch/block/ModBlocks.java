@@ -1,4 +1,4 @@
-package net.zombified_patato.pumpkin_patch.block;
+package com.github.ZombifiedPatato.pumpkin_patch.block;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -9,9 +9,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import net.zombified_patato.pumpkin_patch.PumpkinPatch;
-import net.zombified_patato.pumpkin_patch.block.custom.DwarvenDynamiteBlock;
-import net.zombified_patato.pumpkin_patch.item.ModItemGroups;
+import com.github.ZombifiedPatato.pumpkin_patch.PumpkinPatch;
+import com.github.ZombifiedPatato.pumpkin_patch.block.custom.DwarvenDynamiteBlock;
+import com.github.ZombifiedPatato.pumpkin_patch.item.ModItemGroups;
 
 
 public class ModBlocks {

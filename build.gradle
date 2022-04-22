@@ -49,7 +49,7 @@ dependencies {
 	modImplementation "software.bernie.geckolib:geckolib-fabric-1.18:${geckolib_version}"
 //	modRuntimeOnly "curse.maven:trinkets-341284:3669842"
 //	modRuntimeOnly "curse.maven:cloth_config-319057:3641132"
-//	modRuntimeOnly "com.github.Virtuoel:KanosConfig:0.3.0"
+//	modRuntimeOnly "com.io.github.Virtuoel:KanosConfig:0.3.0"
 //	modRuntimeOnly "com.terraformersmc.terraform-api:terraform-wood-api-v1:3.0.0"
 //	modRuntimeOnly "curse.maven:pehkui-319596:3749602"
 //	modRuntimeOnly "curse.maven:bewitchment-394915:3727852"

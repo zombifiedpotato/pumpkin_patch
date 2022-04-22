@@ -1,10 +1,10 @@
-package net.zombified_patato.pumpkin_patch;
+package com.github.ZombifiedPatato.pumpkin_patch;
 
+import com.github.ZombifiedPatato.pumpkin_patch.block.ModBlocks;
+import com.github.ZombifiedPatato.pumpkin_patch.entity.ModEntities;
+import com.github.ZombifiedPatato.pumpkin_patch.item.ModItems;
 import net.fabricmc.api.ModInitializer;
-import net.zombified_patato.pumpkin_patch.block.ModBlocks;
-import net.zombified_patato.pumpkin_patch.entity.ModEntities;
-import net.zombified_patato.pumpkin_patch.item.ModItems;
-import net.zombified_patato.pumpkin_patch.particle.ModParticles;
+import com.github.ZombifiedPatato.pumpkin_patch.particle.ModParticles;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

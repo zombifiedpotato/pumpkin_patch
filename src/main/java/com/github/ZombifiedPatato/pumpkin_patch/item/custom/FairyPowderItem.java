@@ -1,4 +1,4 @@
-package net.zombified_patato.pumpkin_patch.item.custom;
+package com.github.ZombifiedPatato.pumpkin_patch.item.custom;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -9,7 +9,7 @@ import net.minecraft.stat.Stats;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
-import net.zombified_patato.pumpkin_patch.entity.custom.FairyPowderEntity;
+import com.github.ZombifiedPatato.pumpkin_patch.entity.custom.FairyPowderEntity;
 
 public class FairyPowderItem extends SnowballItem {
     public FairyPowderItem(Settings settings) {

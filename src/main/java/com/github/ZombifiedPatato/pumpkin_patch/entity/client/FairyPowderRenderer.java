@@ -1,4 +1,4 @@
-package net.zombified_patato.pumpkin_patch.entity.client;
+package com.github.ZombifiedPatato.pumpkin_patch.entity.client;
 
 
 import net.minecraft.client.MinecraftClient;
@@ -10,9 +10,9 @@ import net.minecraft.client.render.model.json.ModelTransformation;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
-import net.zombified_patato.pumpkin_patch.PumpkinPatch;
-import net.zombified_patato.pumpkin_patch.entity.custom.FairyPowderEntity;
-import net.zombified_patato.pumpkin_patch.item.ModItems;
+import com.github.ZombifiedPatato.pumpkin_patch.PumpkinPatch;
+import com.github.ZombifiedPatato.pumpkin_patch.entity.custom.FairyPowderEntity;
+import com.github.ZombifiedPatato.pumpkin_patch.item.ModItems;
 
 
 public class FairyPowderRenderer extends EntityRenderer<FairyPowderEntity> {

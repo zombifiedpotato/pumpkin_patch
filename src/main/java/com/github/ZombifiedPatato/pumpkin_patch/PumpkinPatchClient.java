@@ -1,5 +1,7 @@
-package net.zombified_patato.pumpkin_patch;
+package com.github.ZombifiedPatato.pumpkin_patch;
 
+import com.github.ZombifiedPatato.pumpkin_patch.entity.ModEntities;
+import com.github.ZombifiedPatato.pumpkin_patch.entity.client.FairyPowderRenderer;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -14,11 +16,9 @@ import net.minecraft.screen.PlayerScreenHandler;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.registry.Registry;
-import net.zombified_patato.pumpkin_patch.entity.ModEntities;
-import net.zombified_patato.pumpkin_patch.entity.client.DwarvenDynamiteRenderer;
-import net.zombified_patato.pumpkin_patch.entity.client.FairyPowderRenderer;
-import net.zombified_patato.pumpkin_patch.networking.EntitySpawnPacket;
-import net.zombified_patato.pumpkin_patch.particle.ModParticles;
+import com.github.ZombifiedPatato.pumpkin_patch.entity.client.DwarvenDynamiteRenderer;
+import com.github.ZombifiedPatato.pumpkin_patch.networking.EntitySpawnPacket;
+import com.github.ZombifiedPatato.pumpkin_patch.particle.ModParticles;
 
 import java.util.UUID;
 

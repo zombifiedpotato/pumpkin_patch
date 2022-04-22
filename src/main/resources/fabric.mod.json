@@ -19,10 +19,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.zombified_patato.pumpkin_patch.PumpkinPatch"
+      "com.github.ZombifiedPatato.pumpkin_patch.PumpkinPatch"
     ],
     "client": [
-      "net.zombified_patato.pumpkin_patch.PumpkinPatchClient"
+      "com.github.ZombifiedPatato.pumpkin_patch.PumpkinPatchClient"
     ]
   },
   "mixins": [

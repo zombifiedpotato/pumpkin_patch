@@ -1,5 +1,8 @@
-package net.zombified_patato.pumpkin_patch.entity.custom;
+package com.github.ZombifiedPatato.pumpkin_patch.entity.custom;
 
+import com.github.ZombifiedPatato.pumpkin_patch.PumpkinPatchClient;
+import com.github.ZombifiedPatato.pumpkin_patch.entity.ModEntities;
+import com.github.ZombifiedPatato.pumpkin_patch.networking.EntitySpawnPacket;
 import net.minecraft.entity.*;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
@@ -9,9 +12,6 @@ import net.minecraft.network.Packet;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.world.World;
 import net.minecraft.world.explosion.Explosion;
-import net.zombified_patato.pumpkin_patch.PumpkinPatchClient;
-import net.zombified_patato.pumpkin_patch.entity.ModEntities;
-import net.zombified_patato.pumpkin_patch.networking.EntitySpawnPacket;
 import org.jetbrains.annotations.Nullable;
 
 public class DwarvenDynamiteEntity extends Entity {

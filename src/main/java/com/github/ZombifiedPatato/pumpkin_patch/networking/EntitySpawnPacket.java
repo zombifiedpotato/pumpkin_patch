@@ -1,4 +1,4 @@
-package net.zombified_patato.pumpkin_patch.networking;
+package com.github.ZombifiedPatato.pumpkin_patch.networking;
 
 import io.netty.buffer.Unpooled;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;

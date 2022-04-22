@@ -1,10 +1,10 @@
-package net.zombified_patato.pumpkin_patch.particle;
+package com.github.ZombifiedPatato.pumpkin_patch.particle;
 
+import com.github.ZombifiedPatato.pumpkin_patch.PumpkinPatch;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
 import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import net.zombified_patato.pumpkin_patch.PumpkinPatch;
 
 
 public class ModParticles {

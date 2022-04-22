@@ -1,5 +1,9 @@
-package net.zombified_patato.pumpkin_patch.entity.custom;
+package com.github.ZombifiedPatato.pumpkin_patch.entity.custom;
 
+import com.github.ZombifiedPatato.pumpkin_patch.PumpkinPatchClient;
+import com.github.ZombifiedPatato.pumpkin_patch.entity.ModEntities;
+import com.github.ZombifiedPatato.pumpkin_patch.item.ModItems;
+import com.github.ZombifiedPatato.pumpkin_patch.networking.EntitySpawnPacket;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -12,11 +16,7 @@ import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
-import net.zombified_patato.pumpkin_patch.PumpkinPatchClient;
-import net.zombified_patato.pumpkin_patch.entity.ModEntities;
-import net.zombified_patato.pumpkin_patch.item.ModItems;
-import net.zombified_patato.pumpkin_patch.networking.EntitySpawnPacket;
-import net.zombified_patato.pumpkin_patch.particle.ModParticles;
+import com.github.ZombifiedPatato.pumpkin_patch.particle.ModParticles;
 
 import java.util.List;
 

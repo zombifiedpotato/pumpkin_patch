@@ -1,4 +1,4 @@
-package net.zombified_patato.pumpkin_patch.block.custom;
+package com.github.ZombifiedPatato.pumpkin_patch.block.custom;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -23,7 +23,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 import net.minecraft.world.explosion.Explosion;
-import net.zombified_patato.pumpkin_patch.entity.custom.DwarvenDynamiteEntity;
+import com.github.ZombifiedPatato.pumpkin_patch.entity.custom.DwarvenDynamiteEntity;
 import org.jetbrains.annotations.Nullable;
 
 public class DwarvenDynamiteBlock extends Block {

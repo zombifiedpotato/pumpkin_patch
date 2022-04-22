@@ -1,4 +1,4 @@
-package net.zombified_patato.pumpkin_patch.entity;
+package com.github.ZombifiedPatato.pumpkin_patch.entity;
 
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.EntityDimensions;
@@ -6,9 +6,9 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import net.zombified_patato.pumpkin_patch.PumpkinPatch;
-import net.zombified_patato.pumpkin_patch.entity.custom.DwarvenDynamiteEntity;
-import net.zombified_patato.pumpkin_patch.entity.custom.FairyPowderEntity;
+import com.github.ZombifiedPatato.pumpkin_patch.PumpkinPatch;
+import com.github.ZombifiedPatato.pumpkin_patch.entity.custom.DwarvenDynamiteEntity;
+import com.github.ZombifiedPatato.pumpkin_patch.entity.custom.FairyPowderEntity;
 
 public class ModEntities {
 

@@ -1,11 +1,11 @@
-package net.zombified_patato.pumpkin_patch.item;
+package com.github.ZombifiedPatato.pumpkin_patch.item;
 
+import com.github.ZombifiedPatato.pumpkin_patch.item.custom.FairyPowderItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import net.zombified_patato.pumpkin_patch.PumpkinPatch;
-import net.zombified_patato.pumpkin_patch.item.custom.FairyPowderItem;
+import com.github.ZombifiedPatato.pumpkin_patch.PumpkinPatch;
 
 public class ModItems {
 
