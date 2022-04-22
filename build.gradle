@@ -45,7 +45,7 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	modImplementation "software.bernie.geckolib:geckolib-fabric-1.18:${geckolib_version}"
 	modImplementation "com.github.apace100:origins-fabric:${origins_version}"
-	modImplementation "vazkii.botania:Botania:${botania_version}"
+	modRuntimeOnly "vazkii.botania:Botania:${botania_version}"
 }
 
 processResources {
