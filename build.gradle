@@ -18,6 +18,8 @@ repositories {
 	// for more information about repositories.
 	maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
 	maven { url 'https://jitpack.io' }
+	maven { url "https://cursemaven.com"
+		content { includeGroup "curse.maven" } }
 
 	// for origins
 	maven { name = "Ladysnake Libs"
@@ -27,7 +29,10 @@ repositories {
 	maven { url "https://maven.jamieswhiteshirt.com/libs-release"
 		content { includeGroup "com.jamieswhiteshirt" } }
 	maven { url "https://maven.shedaniel.me/" }
-	maven { url "https://maven.terraformersmc.com/" }
+	maven {
+		name = 'TerraformersMC'
+		url = 'https://maven.terraformersmc.com/'
+	}
 	// for botania
 	maven { name = "Jared"
 		url = uri("https://maven.blamejared.com/")
@@ -44,6 +49,12 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	modImplementation "software.bernie.geckolib:geckolib-fabric-1.18:${geckolib_version}"
+//	modRuntimeOnly "curse.maven:trinkets-341284:3669842"
+//	modRuntimeOnly "curse.maven:cloth_config-319057:3641132"
+//	modRuntimeOnly "com.github.Virtuoel:KanosConfig:0.3.0"
+//	modRuntimeOnly "com.terraformersmc.terraform-api:terraform-wood-api-v1:3.0.0"
+//	modRuntimeOnly "curse.maven:pehkui-319596:3749602"
+//	modRuntimeOnly "curse.maven:bewitchment-394915:3727852"
 	modImplementation "com.github.apace100:origins-fabric:${origins_version}"
 	modRuntimeOnly "vazkii.botania:Botania:${botania_version}"
 }
