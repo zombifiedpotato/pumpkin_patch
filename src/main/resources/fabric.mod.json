@@ -14,7 +14,7 @@
   },
 
   "license": "MIT",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/pumpkin_patch/icon.png",
 
   "environment": "*",
   "entrypoints": {
