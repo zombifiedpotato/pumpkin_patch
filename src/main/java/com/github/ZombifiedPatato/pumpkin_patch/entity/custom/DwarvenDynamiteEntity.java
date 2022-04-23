@@ -3,6 +3,7 @@ package com.github.ZombifiedPatato.pumpkin_patch.entity.custom;
 import com.github.ZombifiedPatato.pumpkin_patch.PumpkinPatchClient;
 import com.github.ZombifiedPatato.pumpkin_patch.entity.ModEntities;
 import com.github.ZombifiedPatato.pumpkin_patch.networking.EntitySpawnPacket;
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.*;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
@@ -10,6 +11,7 @@ import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.Packet;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.explosion.Explosion;
 import org.jetbrains.annotations.Nullable;
@@ -82,9 +84,19 @@ public class DwarvenDynamiteEntity extends Entity {
     }
 
     private void explode() {
-        float power = 7.0F;
-        //ToDo Break all obsidion blocks in imidiat radius
-        this.world.createExplosion(this, this.getX(), this.getBodyY(0.0625), this.getZ(), power, Explosion.DestructionType.BREAK);
+        this.world.createExplosion(this, this.getX(), this.getBodyY(0.0625), this.getZ(), 7.0F, Explosion.DestructionType.BREAK);
+        int radius = 4 + 1;
+        for (int x = this.getBlockX() - radius; x <= this.getBlockX() + radius; x++) {
+            for(int y = this.getBlockY() - radius; y <= this.getBlockY() + radius; y++) {
+                for (int z = this.getBlockZ() - radius; z <= this.getBlockZ() + radius; z++) {
+                    if (this.getBlockPos().isWithinDistance(new BlockPos(x,y,z), radius - 1) &&
+                            this.getWorld().getBlockState(new BlockPos(x,y,z)).getBlock().equals(Blocks.OBSIDIAN)) {
+                        this.getWorld().breakBlock(new BlockPos(x,y,z), true);
+                    }
+                }
+            }
+        }
+
     }
 
     @Override
