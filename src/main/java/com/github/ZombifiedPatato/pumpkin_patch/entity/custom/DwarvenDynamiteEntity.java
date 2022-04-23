@@ -8,6 +8,7 @@ import net.minecraft.entity.*;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.Packet;
 import net.minecraft.particle.ParticleTypes;
@@ -85,7 +86,7 @@ public class DwarvenDynamiteEntity extends Entity {
 
     private void explode() {
         this.world.createExplosion(this, this.getX(), this.getBodyY(0.0625), this.getZ(), 7.0F, Explosion.DestructionType.BREAK);
-        int radius = 4 + 1;
+        int radius = 3 + 1;
         for (int x = this.getBlockX() - radius; x <= this.getBlockX() + radius; x++) {
             for(int y = this.getBlockY() - radius; y <= this.getBlockY() + radius; y++) {
                 for (int z = this.getBlockZ() - radius; z <= this.getBlockZ() + radius; z++) {
@@ -96,6 +97,7 @@ public class DwarvenDynamiteEntity extends Entity {
                 }
             }
         }
+        this.world.createExplosion(this, this.getX(), this.getBodyY(0.0625), this.getZ(), 3.0F, Explosion.DestructionType.BREAK);
 
     }
 
