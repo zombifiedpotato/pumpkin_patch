@@ -37,6 +37,7 @@
     "origins": ">=1.4.1"
   },
   "recommends": {
-    "botania": ">=1.18.2-431-FABRIC"
+    "botania": ">=1.18.2-431-FABRIC",
+    "modern_industrialization": ">=1.1.0-alpha.01"
   }
 }

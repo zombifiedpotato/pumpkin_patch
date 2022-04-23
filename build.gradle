@@ -18,9 +18,13 @@ repositories {
 	// for more information about repositories.
 	maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
 	maven { url 'https://jitpack.io' }
-	maven { url "https://cursemaven.com"
-		content { includeGroup "curse.maven" } }
-
+	// for modern industrialization
+	maven { name = "Modrinth"
+		url = "https://api.modrinth.com/maven"
+		content { includeGroup "maven.modrinth" } }
+	maven {
+		url = uri("https://storage.googleapis.com/devan-maven/")
+	}
 	// for origins
 	maven { name = "Ladysnake Libs"
 		url = 'https://ladysnake.jfrog.io/artifactory/mods' }
@@ -47,14 +51,17 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	modImplementation "software.bernie.geckolib:geckolib-fabric-1.18:${geckolib_version}"
-//	modRuntimeOnly "curse.maven:trinkets-341284:3669842"
-//	modRuntimeOnly "curse.maven:cloth_config-319057:3641132"
-//	modRuntimeOnly "com.io.github.Virtuoel:KanosConfig:0.3.0"
-//	modRuntimeOnly "com.terraformersmc.terraform-api:terraform-wood-api-v1:3.0.0"
-//	modRuntimeOnly "curse.maven:pehkui-319596:3749602"
-//	modRuntimeOnly "curse.maven:bewitchment-394915:3727852"
 	modImplementation "com.github.apace100:origins-fabric:${origins_version}"
+
 	modRuntimeOnly "vazkii.botania:Botania:${botania_version}"
+	// for modern industrialization
+	include modApi("teamreborn:energy:${team_reborn_energy_version}") { exclude(group: "net.fabricmc.fabric-api") }
+	modRuntimeOnly "com.github.Draylar:magna:${magna_version}"
+	modRuntimeOnly("net.devtech:arrp:${arrp_version}")
+	modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:${rei_version}"
+	modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:${rei_version}"
+	modRuntimeOnly "maven.modrinth:modern-industrialization:${modern_industrialization_version}"
+
 }
 
 processResources {
