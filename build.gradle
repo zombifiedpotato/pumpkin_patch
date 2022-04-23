@@ -17,7 +17,6 @@ repositories {
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
 	maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
-	maven { url 'https://jitpack.io' }
 	// for modern industrialization
 	maven { name = "Modrinth"
 		url = "https://api.modrinth.com/maven"
@@ -26,6 +25,7 @@ repositories {
 		url = uri("https://storage.googleapis.com/devan-maven/")
 	}
 	// for origins
+	maven { url 'https://jitpack.io' }
 	maven { name = "Ladysnake Libs"
 		url = 'https://ladysnake.jfrog.io/artifactory/mods' }
 	maven { url = 'https://maven.cafeteria.dev'
@@ -40,6 +40,10 @@ repositories {
 		url = uri("https://maven.blamejared.com/")
 		content { includeGroup("vazkii.botania")
 			includeGroup("vazkii.patchouli") } }
+	// for bewitchment
+//	maven { url "https://cursemaven.com"
+//		content { includeGroup "curse.maven" } }
+
 }
 
 dependencies {
@@ -53,6 +57,7 @@ dependencies {
 	modImplementation "software.bernie.geckolib:geckolib-fabric-1.18:${geckolib_version}"
 	modImplementation "com.github.apace100:origins-fabric:${origins_version}"
 
+	// for botania
 	modRuntimeOnly "vazkii.botania:Botania:${botania_version}"
 	// for modern industrialization
 	include modApi("teamreborn:energy:${team_reborn_energy_version}") { exclude(group: "net.fabricmc.fabric-api") }
@@ -61,6 +66,13 @@ dependencies {
 	modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:${rei_version}"
 	modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:${rei_version}"
 	modRuntimeOnly "maven.modrinth:modern-industrialization:${modern_industrialization_version}"
+	// for bewitchment
+//	modApi("com.github.Virtuoel:Pehkui:${pehkui_version}", {
+//		exclude group: "net.fabricmc.fabric-api"
+//	})
+//	modRuntimeOnly "com.terraformersmc.terraform-api:terraform-wood-api-v1:${terraform_wood_version}"
+//	modRuntimeOnly "curse.maven:bewitchment-394915:${bewitchment_version}"
+
 
 }
 
