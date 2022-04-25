@@ -1,6 +1,6 @@
 {
   "replace": true,
+  "enabled": false,
   "origins": [
-    "pumpkin_patch:test_1"
   ]
 }
