@@ -4,9 +4,12 @@
   "package": "com.github.ZombifiedPatato.pumpkin_patch.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "CraftingScreenHandlerMixin"
   ],
   "client": [
-    "ExampleMixin"
+  ],
+  "server": [
+
   ],
   "injectors": {
     "defaultRequire": 1
