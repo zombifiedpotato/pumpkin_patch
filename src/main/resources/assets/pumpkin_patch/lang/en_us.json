@@ -3,5 +3,7 @@
 
   "block.pumpkin_patch.dwarven_dynamite_block": "Dwarven Dynamite",
 
-  "itemGroup.pumpkin_patch.pumpkin_patch": "Pumpkin Patch"
+  "itemGroup.pumpkin_patch.pumpkin_patch": "Pumpkin Patch",
+
+  "layer.pumpkin_patch.races.name": "Race"
 }
