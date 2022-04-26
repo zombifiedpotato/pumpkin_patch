@@ -17,6 +17,7 @@ repositories {
 	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
 	// for more information about repositories.
 	maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
+	maven { url = "https://maven.kyrptonaught.dev"	}
 	// for modern industrialization
 	maven { name = "Modrinth"
 		url = "https://api.modrinth.com/maven"
@@ -56,6 +57,8 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	modImplementation "software.bernie.geckolib:geckolib-fabric-1.18:${geckolib_version}"
 	modImplementation "com.github.apace100:origins-fabric:${origins_version}"
+	modImplementation "net.kyrptonaught:customportalapi:${customportalapi_version}"
+	include "net.kyrptonaught:customportalapi:${customportalapi_version}"
 
 	// for botania
 	modRuntimeOnly "vazkii.botania:Botania:${botania_version}"
