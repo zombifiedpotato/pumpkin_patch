@@ -34,10 +34,13 @@
     "fabric": "*",
     "minecraft": "1.18.x",
     "java": ">=17",
-    "origins": ">=1.4.1"
+    "origins": ">=1.4.1",
+    "extraorigins": ">=1.18-10"
   },
   "recommends": {
-    "botania": ">=1.18.2-431-FABRIC",
-    "modern_industrialization": ">=1.1.0-alpha.01"
+    "botania": "",
+    "modern_industrialization": "",
+    "bewitchment": "",
+    "spectrum": ""
   }
 }

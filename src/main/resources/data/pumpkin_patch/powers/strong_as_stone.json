@@ -1,0 +1,11 @@
+{
+  "name": "Strong As Stone",
+  "description": "You have natural armor, because your skin is as hard as stone.",
+  "type": "origins:attribute",
+  "modifier": {
+    "name": "Armor increase",
+    "attribute": "minecraft:generic.armor",
+    "operation": "addition",
+    "value": 3
+  }
+}

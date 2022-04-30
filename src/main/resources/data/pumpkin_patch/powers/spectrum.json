@@ -1,0 +1,11 @@
+{
+  "name": "Colorfull Powers",
+  "description": "You have access to the items from the Spectrum mod!",
+  "type": "origins:attribute",
+  "modifier": {
+    "name": "Armor increase",
+    "attribute": "minecraft:generic.armor",
+    "operation": "addition",
+    "value": 0
+  }
+}

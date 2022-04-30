@@ -30,9 +30,9 @@ public class CraftingScreenHandlerMixin {
 
 	@Inject(method = "updateResult", at = @At(value = "TAIL", shift = At.Shift.BY, by = -3), cancellable = true)
 	private static void craftedItem(ScreenHandler handler, World world, PlayerEntity player, CraftingInventory craftingInventory, CraftingResultInventory resultInventory, CallbackInfo callbackInfo) {
-		List<String> mi_origins = List.of("test_1");
-		List<String> botania_origins = List.of("test_2");
-		List<String> bewitchment_origins = List.of("test_3");
+		List<String> mi_origins = List.of("automaton", "dwarf");
+		List<String> spectrum_origins = List.of("test_2");
+		List<String> bewitchment_botania_origins = List.of("test_3");
 		try {
 			Optional<CraftingRecipe> optional = world.getServer().getRecipeManager().getFirstMatch(RecipeType.CRAFTING, craftingInventory, world);
 			if (optional.isPresent()){
@@ -41,8 +41,8 @@ public class CraftingScreenHandlerMixin {
 				String origin = origins.get(OriginLayers.getLayer(new Identifier(PumpkinPatch.MOD_ID, "races"))).getIdentifier().getPath();
 				if (
 						(namespace.equals("modern_industrialization") && !mi_origins.contains(origin)) ||
-						(namespace.equals("botania") && !botania_origins.contains(origin)) ||
-						(namespace.equals("bewitchment") && !bewitchment_origins.contains(origin))
+						(namespace.equals("spectrum") && !spectrum_origins.contains(origin)) ||
+						((namespace.equals("bewitchment") || namespace.equals("botania")) && !bewitchment_botania_origins.contains(origin))
 				){
 					ItemStack itemStack = ItemStack.EMPTY;
 					ServerPlayerEntity serverPlayerEntity = (ServerPlayerEntity) player;

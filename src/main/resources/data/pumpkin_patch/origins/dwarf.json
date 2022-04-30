@@ -1,0 +1,14 @@
+{
+	"powers": [
+		"pumpkin_patch:modern_industrialization",
+		"pumpkin_patch:dwarf_size",
+		"pumpkin_patch:strong_as_stone"
+	],
+	"icon": {
+		"item": "minecraft:gold_ingot"
+	},
+	"order": 3,
+	"impact": 2,
+	"name": "Dwarf",
+	"description": "Dwarves were a tough, tradition-abiding folk known for their strong martial traditions and beautiful craftsmanship."
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Dwarf Size",
+  "description": "Since you are a dwarf, you are only 60% the size of a human.",
+  "type": "extraorigins:modify_size",
+  "scale": 0.6
+}

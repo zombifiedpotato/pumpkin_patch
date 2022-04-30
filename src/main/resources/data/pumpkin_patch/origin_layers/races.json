@@ -1,7 +1,8 @@
 {
   "replace": true,
   "origins": [
-    "pumpkin_patch:test_1",
+    "pumpkin_patch:automaton",
+    "pumpkin_patch:dwarf",
     "pumpkin_patch:test_2",
     "pumpkin_patch:test_3"
   ]

@@ -1,0 +1,11 @@
+{
+  "name": "Spare Parts",
+  "description": "You have more health, since you were designed with redundancy in mind.",
+  "type": "origins:attribute",
+  "modifier": {
+    "name": "Max health increase",
+    "attribute": "minecraft:generic.max_health",
+    "operation": "addition",
+    "value": 4
+  }
+}
