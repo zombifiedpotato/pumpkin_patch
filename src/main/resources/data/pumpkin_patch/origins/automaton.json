@@ -7,7 +7,6 @@
 	"icon": {
 		"item": "minecraft:comparator"
 	},
-	"order": 3,
 	"impact": 2,
 	"name": "Automaton",
 	"description": "Automatons are humans modified with machines to make them better than humans, a lot of them are more machine than human nowadays."

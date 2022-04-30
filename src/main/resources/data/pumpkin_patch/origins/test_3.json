@@ -10,7 +10,6 @@
 	"icon": {
 		"item": "minecraft:elytra"
 	},
-	"order": 3,
 	"impact": 1,
 	"name": "bewitchment",
 	"description": "The origin for bewitchment!  which is not in dev environment :("

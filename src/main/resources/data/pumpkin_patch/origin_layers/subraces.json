@@ -1,0 +1,18 @@
+{
+  "replace": true,
+  "order": 1,
+  "origins": [
+    {
+      "condition": {
+        "type": "origins:origin",
+        "origin": "pumpkin_patch:dwarf",
+        "layer": "pumpkin_patch:races"
+      },
+      "origins": [
+        "pumpkin_patch:duergar",
+        "pumpkin_patch:urdunnir",
+        "pumpkin_patch:dur_authalar"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "powers": [
+  ],
+  "icon": {
+    "item": "minecraft:gold_ingot"
+  },
+  "impact": 2,
+  "name": "Urdunnir",
+  "description": "A long-forgotten offshoot of the dwarves, mainly made from stone. Their name meant \"orecutter\" in the urdunnir dialect of Dwarvish."
+}

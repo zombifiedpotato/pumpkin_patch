@@ -1,0 +1,10 @@
+{
+  "powers": [
+  ],
+  "icon": {
+    "item": "minecraft:gold_ingot"
+  },
+  "impact": 2,
+  "name": "Duergar",
+  "description": "The tyrannical duergar, also known as gray dwarves, use there ancient dwarven knowledge and slaves to expand their subterranean kingdoms."
+}

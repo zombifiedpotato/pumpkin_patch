@@ -10,7 +10,6 @@
 	"icon": {
 		"item": "minecraft:elytra"
 	},
-	"order": 3,
 	"impact": 1,
 	"name": "botania",
 	"description": "The origin for botania!"
