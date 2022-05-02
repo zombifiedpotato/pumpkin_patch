@@ -5,7 +5,7 @@
     "pumpkin_patch:dark_sight"
   ],
   "icon": {
-    "item": "minecraft:gold_ingot"
+    "item": "minecraft:lead"
   },
   "impact": 2,
   "name": "Duergar",

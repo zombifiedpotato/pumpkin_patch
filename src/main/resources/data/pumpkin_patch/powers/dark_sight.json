@@ -1,6 +1,6 @@
 {
   "name": "Dark Sight",
-  "description": "When not exposed to sunlight you will have better sight, but you will have worse sight if you are exposed to the sun.",
+  "description": "When not exposed to sunlight you will have better sight.",
   "type": "origins:night_vision",
   "strength": 0.5
 }
