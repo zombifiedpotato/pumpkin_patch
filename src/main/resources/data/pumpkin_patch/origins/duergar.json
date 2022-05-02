@@ -1,5 +1,8 @@
 {
   "powers": [
+    "pumpkin_patch:fear_of_slavery",
+    "pumpkin_patch:slavers_hate",
+    "pumpkin_patch:dark_sight"
   ],
   "icon": {
     "item": "minecraft:gold_ingot"

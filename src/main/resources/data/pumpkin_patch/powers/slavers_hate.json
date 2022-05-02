@@ -1,0 +1,23 @@
+{
+  "name": "Slavers Hate",
+  "description": "Iron golems and village guards will not like you and attack you on sight.",
+  "type": "origins:multiple",
+  "guards_anger": {
+    "type": "origins:action_over_time",
+    "interval": 5,
+    "entity_action": {
+      "type": "origins:execute_command",
+      "command": "data modify entity @e[type=guardvillagers:guard,limit=1,distance=..20] AngryAt set from entity @s UUID",
+      "permission_level": 4
+    }
+  },
+  "iron_golem_anger": {
+    "type": "origins:action_over_time",
+    "interval": 5,
+    "entity_action": {
+      "type": "origins:execute_command",
+      "command": "data modify entity @e[type=minecraft:iron_golem,limit=1,distance=..20] AngryAt set from entity @s UUID",
+      "permission_level": 4
+    }
+  }
+}

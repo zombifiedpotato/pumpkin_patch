@@ -1,0 +1,32 @@
+{
+  "name": "Fear Of Slavery",
+  "description": "You can intimidate a villager using a lead, giving you better prices.",
+  "type": "origins:action_on_entity_use",
+  "bientity_action": {
+    "type": "origins:actor_action",
+    "action": {
+      "type": "origins:apply_effect",
+      "effect": {
+        "effect": "minecraft:hero_of_the_village",
+        "duration": 100,
+        "amplifier": 5,
+        "is_ambient": false,
+        "show_particles": false,
+        "show_icon": false
+      }
+    }
+  },
+  "bientity_condition": {
+    "type": "origins:target_condition",
+    "condition": {
+      "type": "origins:entity_type",
+      "entity_type": "minecraft:villager"
+    }
+  },
+  "item_condition": {
+    "type": "origins:ingredient",
+    "ingredient": {
+      "item": "minecraft:lead"
+    }
+  }
+}
