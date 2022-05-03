@@ -1,9 +1,12 @@
 {
   "powers": [
-    "pumpkin_patch:mechanical_wings"
+    "pumpkin_patch:mechanical_wings",
+    "pumpkin_patch:mechanical_wings_starterpack",
+    "pumpkin_patch:vegetarian",
+    "pumpkin_patch:friend_of_nature"
   ],
   "icon": {
-    "item": "icarus:orange_mechanical_leather_wings"
+    "item": "minecraft:egg"
   },
   "impact": 2,
   "name": "Dur Authalar",

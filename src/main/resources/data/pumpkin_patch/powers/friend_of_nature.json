@@ -1,0 +1,30 @@
+{
+  "name": "Friend Of Nature",
+  "description": "Having animals nearby, will grant you extra speed and resistance.",
+  "type": "origins:action_on_entity_use",
+  "bientity_action": {
+    "type": "origins:actor_action",
+    "action": {
+      "type": "origins:apply_effect",
+      "effects": [
+        {
+          "effect": "minecraft:speed",
+          "duration": 1200,
+          "amplifier": 1
+        },
+        {
+          "effect": "minecraft:resistance",
+          "duration": 1200,
+          "amplifier": 0
+        }
+      ]
+    }
+  },
+  "bientity_condition": {
+    "type": "origins:target_condition",
+    "condition": {
+      "type": "origins:entity_type",
+      "entity_type": "minecraft:animal"
+    }
+  }
+}
