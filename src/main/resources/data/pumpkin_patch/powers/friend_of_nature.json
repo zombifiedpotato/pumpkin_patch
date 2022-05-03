@@ -21,26 +21,11 @@
       "type": "pumpkin_patch:entity_type_in_range",
     "radius": 15,
       "entity_types": [
-        "minecraft:axolotl",
-        "minecraft:bee",
-        "minecraft:cat",
-        "minecraft:chicken",
-        "minecraft:cow",
-        "minecraft:donkey",
-        "minecraft:fox",
-        "minecraft:goat",
-        "minecraft:horse",
-        "minecraft:llama",
-        "minecraft:mooshroom",
-        "minecraft:mule",
-        "minecraft:ocelot",
-        "minecraft:panda",
-        "minecraft:pig",
-        "minecraft:rabbit",
         "minecraft:sheep",
-        "minecraft:trader_llama",
-        "minecraft:turtle",
-        "minecraft:wolf"
+        "minecraft:cow",
+        "minecraft:parrot",
+        "minecraft:ocelot",
+        "minecraft:panda"
       ]
   },
   "interval": 20

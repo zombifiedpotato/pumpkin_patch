@@ -29,7 +29,7 @@ public class ModConditions {
                 List<LivingEntity> livingEntityList = new ArrayList<>();
                 for (EntityType e:entityTypes) {
                     Predicate<LivingEntity> livingEntityPredicate = n -> n.getType().equals(e);
-                    livingEntityList = entity.getEntityWorld().getEntitiesByType(TypeFilter.instanceOf(LivingEntity.class), range, livingEntityPredicate);
+                    livingEntityList.addAll(entity.getEntityWorld().getEntitiesByType(TypeFilter.instanceOf(LivingEntity.class), range, livingEntityPredicate));
                 }
                 return !livingEntityList.isEmpty();
             }));
