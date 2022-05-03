@@ -1,6 +1,7 @@
 package com.github.ZombifiedPatato.pumpkin_patch.mixin;
 
 import com.github.ZombifiedPatato.pumpkin_patch.PumpkinPatch;
+import io.github.apace100.apoli.power.Power;
 import io.github.apace100.origins.origin.Origin;
 import io.github.apace100.origins.origin.OriginLayer;
 import io.github.apace100.origins.origin.OriginLayers;
