@@ -1,8 +1,9 @@
 {
   "powers": [
+    "pumpkin_patch:mechanical_wings"
   ],
   "icon": {
-    "item": "minecraft:gold_ingot"
+    "item": "icarus:orange_mechanical_leather_wings"
   },
   "impact": 2,
   "name": "Dur Authalar",

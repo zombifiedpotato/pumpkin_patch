@@ -1,0 +1,28 @@
+{
+  "name": "Mechanical Wings",
+  "description": "You are the only race who figured out how to build mechanical wings and launchers to make flight possible.",
+  "type": "origins:recipe",
+  "recipe": {
+    "id": "pumpkin_patch:mechanical_wings/mechanical_wing_crafting",
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "BBB",
+      "IBI",
+      "LBL"
+    ],
+    "key": {
+      "B": {
+        "item": "minecraft:bamboo"
+      },
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "L": {
+        "tag": "c:leather"
+      }
+    },
+    "result": {
+      "item": "icarus:orange_mechanical_leather_wings"
+    }
+  }
+}
