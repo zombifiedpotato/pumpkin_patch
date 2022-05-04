@@ -41,6 +41,7 @@
     "botania": "",
     "modern_industrialization": "",
     "bewitchment": "",
-    "spectrum": ""
+    "spectrum": "",
+    "icarus": ">=1.11"
   }
 }
