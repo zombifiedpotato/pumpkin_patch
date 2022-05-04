@@ -1,5 +1,6 @@
 {
   "name": "Colorfull Powers",
   "description": "You have access to the items from the Spectrum mod!",
-  "type": "origins:simple"
+  "type": "pumpkin_patch:mod_crafting_blocker",
+  "modid": "spectrum"
 }

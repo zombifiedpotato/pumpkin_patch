@@ -1,5 +1,6 @@
 {
   "name": "Industrial Knowledge",
   "description": "You have access to the items from the Modern Industrialization mod!",
-  "type": "origins:simple"
+  "type": "pumpkin_patch:mod_crafting_blocker",
+  "modid": "modern_industrialization"
 }

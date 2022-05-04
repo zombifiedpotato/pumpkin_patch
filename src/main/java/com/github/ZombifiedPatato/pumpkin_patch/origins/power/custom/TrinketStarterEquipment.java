@@ -2,7 +2,6 @@ package com.github.ZombifiedPatato.pumpkin_patch.origins.power.custom;
 
 import com.github.ZombifiedPatato.pumpkin_patch.PumpkinPatch;
 import dev.emi.trinkets.api.TrinketItem;
-import dev.emi.trinkets.api.TrinketsApi;
 import io.github.apace100.apoli.data.ApoliDataTypes;
 import io.github.apace100.apoli.power.Power;
 import io.github.apace100.apoli.power.PowerType;
@@ -19,7 +18,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class TrinketStarterEquipment extends Power {
-    private List<ItemStack> items = new LinkedList<>();
+    private final List<ItemStack> items = new LinkedList<>();
     private boolean recurrent;
 
     public TrinketStarterEquipment(PowerType<?> type, LivingEntity entity) {

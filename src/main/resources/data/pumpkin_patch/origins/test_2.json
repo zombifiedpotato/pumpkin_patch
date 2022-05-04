@@ -5,7 +5,8 @@
 		"origins:aerial_combatant",
 		"origins:light_armor",
 		"origins:claustrophobia",
-		"origins:more_kinetic_damage"
+		"origins:more_kinetic_damage",
+		"pumpkin_patch:botania_bewitchment"
 	],
 	"icon": {
 		"item": "minecraft:elytra"
