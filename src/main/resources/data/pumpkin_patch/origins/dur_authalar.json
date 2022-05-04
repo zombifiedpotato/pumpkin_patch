@@ -6,7 +6,7 @@
     "pumpkin_patch:friend_of_nature"
   ],
   "icon": {
-    "item": "minecraft:egg"
+    "item": "icarus:orange_mechanical_leather_wings"
   },
   "impact": 2,
   "name": "Dur Authalar",

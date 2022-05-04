@@ -1,8 +1,9 @@
 {
   "powers": [
+    "pumpkin_patch:shiny_diet"
   ],
   "icon": {
-    "item": "minecraft:gold_ingot"
+    "item": "minecraft:stone"
   },
   "impact": 2,
   "name": "Urdunnir",

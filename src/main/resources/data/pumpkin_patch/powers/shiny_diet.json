@@ -1,0 +1,305 @@
+{
+  "name": "Shiny Diet",
+  "description": "You can only feed on stone, iron ingot, gold ingot, emerald, diamond and netherite ingot.",
+  "type": "origins:multiple",
+  "no_food": {
+    "type": "origins:prevent_item_use",
+    "item_condition": {
+      "type": "origins:food"
+    }
+  },
+  "stone_food": {
+    "type": "origins:active_self",
+    "cooldown": 20,
+    "hud_render": {
+      "should_render": false
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "mainhand",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "minecraft:stone"
+            }
+          }
+        },
+        {
+          "type": "origins:food_level",
+          "comparison": "<",
+          "compare_to": 20
+        }
+      ]
+    },
+    "entity_action": {
+      "type": "origins:and",
+      "actions":  [
+        {
+          "type": "origins:execute_command",
+          "command": "clear @s stone 1"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "playsound minecraft:entity.generic.eat player @s ~ ~ ~ 1 1"
+        },
+        {
+          "type": "origins:feed",
+          "food": 1,
+          "saturation": 1
+        }
+      ]
+    },
+    "key": {
+      "key": "key.use",
+      "continuous": true
+    }
+  },
+  "iron_food": {
+    "type": "origins:active_self",
+    "cooldown": 20,
+    "hud_render": {
+      "should_render": false
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "mainhand",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "minecraft:iron_ingot"
+            }
+          }
+        },
+        {
+          "type": "origins:food_level",
+          "comparison": "<",
+          "compare_to": 20
+        }
+      ]
+    },
+    "entity_action": {
+      "type": "origins:and",
+      "actions":  [
+        {
+          "type": "origins:execute_command",
+          "command": "clear @s iron_ingot 1"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "playsound minecraft:entity.generic.eat player @s ~ ~ ~ 1 1"
+        },
+        {
+          "type": "origins:feed",
+          "food": 4,
+          "saturation": 4
+        }
+      ]
+    },
+    "key": {
+      "key": "key.use",
+      "continuous": true
+    }
+  },
+  "gold_food": {
+    "type": "origins:active_self",
+    "cooldown": 20,
+    "hud_render": {
+      "should_render": false
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "mainhand",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "minecraft:gold_ingot"
+            }
+          }
+        },
+        {
+          "type": "origins:food_level",
+          "comparison": "<",
+          "compare_to": 20
+        }
+      ]
+    },
+    "entity_action": {
+      "type": "origins:and",
+      "actions":  [
+        {
+          "type": "origins:execute_command",
+          "command": "clear @s gold_ingot 1"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "playsound minecraft:entity.generic.eat player @s ~ ~ ~ 1 1"
+        },
+        {
+          "type": "origins:feed",
+          "food": 6,
+          "saturation": 1
+        }
+      ]
+    },
+    "key": {
+      "key": "key.use",
+      "continuous": true
+    }
+  },
+  "emerald_food": {
+    "type": "origins:active_self",
+    "cooldown": 20,
+    "hud_render": {
+      "should_render": false
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "mainhand",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "minecraft:emerald"
+            }
+          }
+        },
+        {
+          "type": "origins:food_level",
+          "comparison": "<",
+          "compare_to": 20
+        }
+      ]
+    },
+    "entity_action": {
+      "type": "origins:and",
+      "actions":  [
+        {
+          "type": "origins:execute_command",
+          "command": "clear @s emerald 1"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "playsound minecraft:entity.generic.eat player @s ~ ~ ~ 1 1"
+        },
+        {
+          "type": "origins:feed",
+          "food": 7,
+          "saturation": 7
+        }
+      ]
+    },
+    "key": {
+      "key": "key.use",
+      "continuous": true
+    }
+  },
+  "diamond_food": {
+    "type": "origins:active_self",
+    "cooldown": 20,
+    "hud_render": {
+      "should_render": false
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "mainhand",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "minecraft:diamond"
+            }
+          }
+        },
+        {
+          "type": "origins:food_level",
+          "comparison": "<",
+          "compare_to": 20
+        }
+      ]
+    },
+    "entity_action": {
+      "type": "origins:and",
+      "actions":  [
+        {
+          "type": "origins:execute_command",
+          "command": "clear @s diamond 1"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "playsound minecraft:entity.generic.eat player @s ~ ~ ~ 1 1"
+        },
+        {
+          "type": "origins:feed",
+          "food": 10,
+          "saturation": 8
+        }
+      ]
+    },
+    "key": {
+      "key": "key.use",
+      "continuous": true
+    }
+  },
+  "netherite_food": {
+    "type": "origins:active_self",
+    "cooldown": 20,
+    "hud_render": {
+      "should_render": false
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "mainhand",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "minecraft:netherite_ingot"
+            }
+          }
+        },
+        {
+          "type": "origins:food_level",
+          "comparison": "<",
+          "compare_to": 20
+        }
+      ]
+    },
+    "entity_action": {
+      "type": "origins:and",
+      "actions":  [
+        {
+          "type": "origins:execute_command",
+          "command": "clear @s netherite_ingot 1"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "playsound minecraft:entity.generic.eat player @s ~ ~ ~ 1 1"
+        },
+        {
+          "type": "origins:feed",
+          "food": 20,
+          "saturation": 20
+        }
+      ]
+    },
+    "key": {
+      "key": "key.use",
+      "continuous": true
+    }
+  }
+}
