@@ -1,4 +1,4 @@
-package com.github.ZombifiedPatato.pumpkin_patch.condition;
+package com.github.ZombifiedPatato.pumpkin_patch.origins.condition;
 
 import io.github.apace100.apoli.power.factory.condition.ConditionFactory;
 import io.github.apace100.apoli.registry.ApoliRegistries;

@@ -3,7 +3,8 @@ package com.github.ZombifiedPatato.pumpkin_patch;
 import com.github.ZombifiedPatato.pumpkin_patch.block.ModBlocks;
 import com.github.ZombifiedPatato.pumpkin_patch.entity.ModEntities;
 import com.github.ZombifiedPatato.pumpkin_patch.item.ModItems;
-import com.github.ZombifiedPatato.pumpkin_patch.condition.ModConditions;
+import com.github.ZombifiedPatato.pumpkin_patch.origins.condition.ModConditions;
+import com.github.ZombifiedPatato.pumpkin_patch.origins.power.ModPowers;
 import net.fabricmc.api.ModInitializer;
 import com.github.ZombifiedPatato.pumpkin_patch.particle.ModParticles;
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
@@ -23,6 +24,7 @@ public class PumpkinPatch implements ModInitializer {
 		ModEntities.registerModEntities();
 		ModParticles.registerModParticles();
 		ModConditions.registerModConditions();
+		ModPowers.registerPowers();
 		registerPortals();
 	}
 

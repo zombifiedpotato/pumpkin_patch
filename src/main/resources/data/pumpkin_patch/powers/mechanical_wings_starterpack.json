@@ -1,12 +1,17 @@
 {
   "hidden": true,
-  "type": "origins:starting_equipment",
+  "type": "pumpkin_patch:starting_equipment",
   "stacks": [
     {
       "item": "minecraft:written_book",
       "amount": 1,
       "tag": "{display: {Name: '{\"text\": \"Mechanical Wings Blueprint\", \"color\": \"orange\", \"italic\": true}'}, pages:['{\"text\":\"Crafting Recipe:\n\nB | B | B\nR | B | R\nL | B | L\n\n\nB: Bamboo\nR: Iron Ingot\nL: Leather\"}'],title:\"Mechanical Wings Blueprint\",author:ZombifiedPatato}",
       "slot": 8
+    },
+    {
+      "item": "icarus:orange_mechanical_leather_wings",
+      "amount": 1,
+      "slot": 38
     }
   ]
 }

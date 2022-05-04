@@ -35,13 +35,14 @@
     "minecraft": "1.18.x",
     "java": ">=17",
     "origins": ">=1.4.1",
-    "extraorigins": ">=1.18-10"
+    "trinkets": ">=3.3.0"
   },
   "recommends": {
     "botania": "",
     "modern_industrialization": "",
     "bewitchment": "",
     "spectrum": "",
-    "icarus": ">=1.11"
+    "icarus": ">=1.11",
+    "extraorigins": ">=1.18-10"
   }
 }
