@@ -1,6 +1,10 @@
 {
   "powers": [
-    "pumpkin_patch:shiny_diet"
+    "pumpkin_patch:shiny_diet",
+    "pumpkin_patch:stone_is_air",
+    "pumpkin_patch:stone_is_air_overlay",
+    "pumpkin_patch:stone_is_air_active",
+    "pumpkin_patch:stone_is_air_hunger"
   ],
   "icon": {
     "item": "minecraft:stone"
