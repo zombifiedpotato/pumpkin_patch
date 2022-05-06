@@ -1,0 +1,110 @@
+{
+  "name": "Shiny Power",
+  "description": "Blocks of shiny vanilla materials give you buffs.",
+  "type": "origins:multiple",
+  "iron_block": {
+    "type": "origins:action_over_time",
+    "entity_action": {
+      "type": "origins:apply_effect",
+      "effect": {
+        "effect": "minecraft:speed",
+        "duration": 600,
+        "amplifier": 0
+      }
+    },
+    "condition": {
+      "type": "origins:block_in_radius",
+      "block_condition":{
+        "type": "origins:block",
+        "block": "minecraft:iron_block"
+      },
+      "radius": 5,
+      "shape": "sphere"
+    },
+    "interval": "20"
+  },
+  "gold_block": {
+    "type": "origins:action_over_time",
+    "entity_action": {
+      "type": "origins:apply_effect",
+      "effect": {
+        "effect": "minecraft:saturation",
+        "duration": 600,
+        "amplifier": 0
+      }
+    },
+    "condition": {
+      "type": "origins:block_in_radius",
+      "block_condition":{
+        "type": "origins:block",
+        "block": "minecraft:gold_block"
+      },
+      "radius": 5,
+      "shape": "sphere"
+    },
+    "interval": "20"
+  },
+  "emerald_block": {
+    "type": "origins:action_over_time",
+    "entity_action": {
+      "type": "origins:apply_effect",
+      "effect": {
+        "effect": "minecraft:haste",
+        "duration": 600,
+        "amplifier": 0
+      }
+    },
+    "condition": {
+      "type": "origins:block_in_radius",
+      "block_condition":{
+        "type": "origins:block",
+        "block": "minecraft:emerald_block"
+      },
+      "radius": 5,
+      "shape": "sphere"
+    },
+    "interval": "20"
+  },
+  "diamond_block": {
+    "type": "origins:action_over_time",
+    "entity_action": {
+      "type": "origins:apply_effect",
+      "effect": {
+        "effect": "minecraft:absorption",
+        "duration": 600,
+        "amplifier": 0
+      }
+    },
+    "condition": {
+      "type": "origins:block_in_radius",
+      "block_condition":{
+        "type": "origins:block",
+        "block": "minecraft:diamond_block"
+      },
+      "radius": 5,
+      "shape": "sphere"
+    },
+    "interval": "20"
+  },
+  "netherite_block": {
+    "type": "origins:action_over_time",
+    "entity_action": {
+      "type": "origins:apply_effect",
+      "effect": {
+        "effect": "minecraft:regeneration",
+        "duration": 600,
+        "amplifier": 0
+      }
+    },
+    "condition": {
+      "type": "origins:block_in_radius",
+      "block_condition":{
+        "type": "origins:block",
+        "block": "minecraft:netherite_block"
+      },
+      "radius": 5,
+      "shape": "sphere"
+    },
+    "interval": "20"
+  }
+}

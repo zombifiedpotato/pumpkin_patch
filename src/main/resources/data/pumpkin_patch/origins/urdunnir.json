@@ -4,7 +4,8 @@
     "pumpkin_patch:stone_is_air",
     "pumpkin_patch:stone_is_air_overlay",
     "pumpkin_patch:stone_is_air_active",
-    "pumpkin_patch:stone_is_air_hunger"
+    "pumpkin_patch:stone_is_air_hunger",
+    "pumpkin_patch:shiny_power"
   ],
   "icon": {
     "item": "minecraft:stone"
