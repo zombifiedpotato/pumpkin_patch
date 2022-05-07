@@ -1,6 +1,6 @@
 {
   "name": "Shiny Power",
-  "description": "Blocks of shiny vanilla materials give you buffs.",
+  "description": "Blocks of shiny vanilla materials give you buffs when you touch them.",
   "type": "origins:multiple",
   "iron_block": {
     "type": "origins:action_over_time",
@@ -18,7 +18,7 @@
         "type": "origins:block",
         "block": "minecraft:iron_block"
       },
-      "radius": 5,
+      "radius": 1,
       "shape": "sphere"
     },
     "interval": "20"
@@ -39,7 +39,7 @@
         "type": "origins:block",
         "block": "minecraft:gold_block"
       },
-      "radius": 5,
+      "radius": 1,
       "shape": "sphere"
     },
     "interval": "20"
@@ -60,7 +60,7 @@
         "type": "origins:block",
         "block": "minecraft:emerald_block"
       },
-      "radius": 5,
+      "radius": 1,
       "shape": "sphere"
     },
     "interval": "20"
@@ -81,7 +81,7 @@
         "type": "origins:block",
         "block": "minecraft:diamond_block"
       },
-      "radius": 5,
+      "radius": 1,
       "shape": "sphere"
     },
     "interval": "20"
@@ -102,7 +102,7 @@
         "type": "origins:block",
         "block": "minecraft:netherite_block"
       },
-      "radius": 5,
+      "radius": 1,
       "shape": "sphere"
     },
     "interval": "20"

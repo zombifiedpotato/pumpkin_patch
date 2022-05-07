@@ -1,0 +1,13 @@
+{
+  "name": "Harvest Machine",
+  "description": "You have been modified for combat, giving you an advantage in hand to hand combat.",
+  "powers": [
+    "pumpkin_patch:knee_servos",
+    "pumpkin_patch:harvesting_arms",
+    "pumpkin_patch:not_for_combat"
+  ],
+  "icon": {
+    "item": "minecraft:iron_axe"
+  },
+  "impact": 2
+}

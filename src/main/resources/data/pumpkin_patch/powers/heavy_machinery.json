@@ -1,0 +1,11 @@
+{
+  "name": "Heavy Machinery",
+  "description": "You are way slower than your counterparts, because of the builtin armor and hydrolic pumps.",
+  "type": "origins:attribute",
+  "modifier": {
+    "name": "movement descrease",
+    "attribute": "minecraft:generic.movement_speed",
+    "operation": "addition",
+    "value": -0.02
+  }
+}

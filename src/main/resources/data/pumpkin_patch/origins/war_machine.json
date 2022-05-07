@@ -1,0 +1,13 @@
+{
+  "name": "War Machine",
+  "description": "You have been modified for combat, giving you an advantage in hand to hand combat.",
+  "powers": [
+    "pumpkin_patch:armored",
+    "pumpkin_patch:modified_muscles",
+    "pumpkin_patch:heavy_machinery"
+  ],
+  "icon": {
+    "item": "minecraft:iron_sword"
+  },
+  "impact": 2
+}

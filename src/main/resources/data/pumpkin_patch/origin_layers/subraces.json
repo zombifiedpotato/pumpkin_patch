@@ -13,6 +13,18 @@
         "pumpkin_patch:urdunnir",
         "pumpkin_patch:dur_authalar"
       ]
+    },
+    {
+      "condition": {
+        "type": "origins:origin",
+        "origin": "pumpkin_patch:automaton",
+        "layer": "pumpkin_patch:races"
+      },
+      "origins": [
+        "pumpkin_patch:war_machine",
+        "pumpkin_patch:harvest_machine",
+        "pumpkin_patch:build_machine"
+      ]
     }
   ]
 }

@@ -1,0 +1,11 @@
+{
+  "name": "Modified Muscles",
+  "description": "Your muscles have been made stronger with hydraulic pumps, making you hit harder.",
+  "type": "origins:attribute",
+  "modifier": {
+    "name": "strength increase",
+    "attribute": "minecraft:generic.attack_damage",
+    "operation": "addition",
+    "value": 1
+  }
+}

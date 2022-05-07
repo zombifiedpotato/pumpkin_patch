@@ -1,0 +1,18 @@
+{
+  "name": "Harvesting Arms",
+  "description": "Your arms have been made stronger and faster so you van harvest recourses at an increased speed.",
+  "type": "origins:action_over_time",
+  "entity_action": {
+    "type": "origins:apply_effect",
+    "effects": [
+      {
+        "effect": "minecraft:haste",
+        "duration": 20,
+        "amplifier": 0,
+        "show_particles": false,
+        "show_icon": false
+      }
+    ]
+  },
+  "interval": 10
+}

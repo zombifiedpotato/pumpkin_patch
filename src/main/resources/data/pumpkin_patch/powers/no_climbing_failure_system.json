@@ -1,0 +1,14 @@
+{
+  "name": "No Climbing Failure System",
+  "description": "You are not equipt with a climbing failure feature, as your climbing tools should not fail. you take extra damage from fall damage.",
+  "type": "origins:modify_damage_taken",
+  "damage_condition": {
+    "type": "origins:name",
+    "name": "fall"
+  },
+  "modifier": {
+    "name": "No Climbing Failure System",
+    "operation": "multiply_base",
+    "value": 1.5
+  }
+}

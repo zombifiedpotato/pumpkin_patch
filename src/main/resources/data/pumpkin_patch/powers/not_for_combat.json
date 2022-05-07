@@ -1,0 +1,11 @@
+{
+  "name": "Not Made For Combat",
+  "description": "Your arms are made to harvest, not for combat. you deal less damage in hand to hand combat",
+  "type": "origins:attribute",
+  "modifier": {
+    "name": "damage descrease",
+    "attribute": "minecraft:generic.attack_damage",
+    "operation": "addition",
+    "value": -1
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Armored",
+  "description": "You have some armor built in, giving you natural armor points.",
+  "type": "origins:attribute",
+  "modifier": {
+    "name": "Armor increase",
+    "attribute": "minecraft:generic.armor",
+    "operation": "addition",
+    "value": 4
+  }
+}
