@@ -1,16 +1,14 @@
 package com.github.ZombifiedPatato.pumpkin_patch.entity.custom;
 
-import com.github.ZombifiedPatato.pumpkin_patch.PumpkinPatchClient;
 import com.github.ZombifiedPatato.pumpkin_patch.entity.ModEntities;
-import com.github.ZombifiedPatato.pumpkin_patch.networking.EntitySpawnPacket;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.*;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.Packet;
+import net.minecraft.network.packet.s2c.play.EntitySpawnS2CPacket;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -131,7 +129,6 @@ public class DwarvenDynamiteEntity extends Entity {
 
     @Override
     public Packet<?> createSpawnPacket() {
-        System.out.println("Creating spawn packet for dwarven dynamite!");
-        return EntitySpawnPacket.create(this, PumpkinPatchClient.SPAWN_PACKET_ID);
+        return new EntitySpawnS2CPacket(this);
     }
 }

@@ -1,16 +1,13 @@
 package com.github.ZombifiedPatato.pumpkin_patch.entity.custom;
 
-import com.github.ZombifiedPatato.pumpkin_patch.PumpkinPatchClient;
 import com.github.ZombifiedPatato.pumpkin_patch.entity.ModEntities;
 import com.github.ZombifiedPatato.pumpkin_patch.item.ModItems;
-import com.github.ZombifiedPatato.pumpkin_patch.networking.EntitySpawnPacket;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.item.Item;
-import net.minecraft.network.Packet;
 import net.minecraft.particle.ParticleEffect;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.Box;
@@ -95,10 +92,4 @@ public class FairyPowderEntity extends ThrownItemEntity {
                 }
             }
         }
-
-    @Override
-    public Packet<?> createSpawnPacket() {
-        System.out.println("Creating spawn packet for fairy powder!");
-        return EntitySpawnPacket.create(this, PumpkinPatchClient.SPAWN_PACKET_ID);
-    }
 }
