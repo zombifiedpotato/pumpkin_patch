@@ -1,0 +1,29 @@
+{
+  "name": "Earth Spirit",
+  "description": "Because of your bond with nature, crops that you harvest heal you and give iron nuggets.",
+  "type": "origins:multiple",
+  "iron_nuggets": {
+    "type": "origins:action_on_block_break",
+    "entity_action": {
+      "type": "origins:give",
+      "stack": {
+        "item": "minecraft:iron_nugget"
+      }
+    },
+    "block_condition": {
+      "type": "origins:in_tag",
+      "tag": "minecraft:crops"
+    }
+  },
+  "heal": {
+    "type": "origins:action_on_block_break",
+    "entity_action": {
+      "type": "origins:heal",
+      "amount": 1
+    },
+    "block_condition": {
+      "type": "origins:in_tag",
+      "tag": "minecraft:crops"
+    }
+  }
+}

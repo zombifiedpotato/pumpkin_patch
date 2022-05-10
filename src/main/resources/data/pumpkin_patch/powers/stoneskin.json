@@ -1,0 +1,6 @@
+{
+  "name": "Stone Skin",
+  "description": "You’re slightly taller than humans, have slightly further reach.",
+  "type": "extraorigins:modify_size",
+  "scale": 1.2
+}

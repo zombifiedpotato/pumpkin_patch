@@ -25,6 +25,18 @@
         "pumpkin_patch:harvest_machine",
         "pumpkin_patch:build_machine"
       ]
+    },
+    {
+      "condition": {
+        "type": "origins:origin",
+        "origin": "pumpkin_patch:nymph",
+        "layer": "pumpkin_patch:races"
+      },
+      "origins": [
+        "pumpkin_patch:dryad",
+        "pumpkin_patch:naiad",
+        "pumpkin_patch:oread"
+      ]
     }
   ]
 }

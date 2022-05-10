@@ -1,0 +1,90 @@
+{
+  "name": "Clarity Of Hearth",
+  "description": "Being near leaves, will grant you positive effects. But breaking leaves or logs will give you negative effects",
+  "type": "origins:multiple",
+  "positive": {
+    "type": "origins:action_over_time",
+    "entity_action": {
+      "type": "origins:apply_effect",
+      "effects": [
+        {
+          "effect": "minecraft:speed",
+          "duration": 600,
+          "amplifier": 0
+        },
+        {
+          "effect": "minecraft:strength",
+          "duration": 600,
+          "amplifier": 0
+        }
+      ]
+    },
+    "condition": {
+      "type": "origins:block_in_radius",
+      "radius": 10,
+      "block_condition": {
+        "type": "origins:in_tag",
+        "tag": "minecraft:leaves"
+      },
+      "shape": "sphere",
+      "compare_to": 4
+    },
+    "interval": 20
+  },
+  "negative_leave": {
+    "type": "origins:action_on_block_break",
+    "entity_action": {
+      "type": "origins:apply_effect",
+      "effects": [
+        {
+          "effect": "minecraft:slowness",
+          "duration": 600,
+          "amplifier": 1
+        },
+        {
+          "effect": "minecraft:blindness",
+          "duration": 600,
+          "amplifier": 0
+        },
+        {
+          "effect": "minecraft:weakness",
+          "duration": 600,
+          "amplifier": 1
+        }
+      ]
+    },
+    "block_condition": {
+      "type": "origins:in_tag",
+      "tag": "minecraft:leaves"
+    },
+    "only_when_harvested": false
+  },
+  "negative_log": {
+    "type": "origins:action_on_block_break",
+    "entity_action": {
+      "type": "origins:apply_effect",
+      "effects": [
+        {
+          "effect": "minecraft:slowness",
+          "duration": 300,
+          "amplifier": 1
+        },
+        {
+          "effect": "minecraft:blindness",
+          "duration": 300,
+          "amplifier": 0
+        },
+        {
+          "effect": "minecraft:weakness",
+          "duration": 600,
+          "amplifier": 1
+        }
+      ]
+    },
+    "block_condition": {
+      "type": "origins:in_tag",
+      "tag": "minecraft:logs"
+    },
+    "only_when_harvested": false
+  }
+}

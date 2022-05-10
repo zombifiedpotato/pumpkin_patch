@@ -1,6 +1,6 @@
 {
   "name": "Vegetarian",
-  "description": "Because of your bond with the jungle, you refuse to eat meat.",
+  "description": "Because of your bond with nature, you refuse to eat meat.",
   "type": "origins:prevent_item_use",
   "item_condition": {
     "type": "origins:and",

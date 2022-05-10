@@ -1,0 +1,29 @@
+{
+  "name": "Power of Mountains",
+  "description": "You have stronger legs and are thus faster and jump higher.",
+  "type": "origins:multiple",
+  "speed": {
+    "type": "origins:attribute",
+    "modifier": {
+      "name": "movement increase",
+      "attribute": "minecraft:generic.movement_speed",
+      "operation": "addition",
+      "value": 0.02
+    }
+  },
+  "jump": {
+    "type": "origins:action_over_time",
+    "entity_action": {
+      "type": "origins:apply_effect",
+      "effect": {
+          "effect": "minecraft:jump_boost",
+          "duration": 600,
+          "amplifier": 1,
+        "show_particles": false,
+        "show_icon": false
+        }
+
+    },
+    "interval": 20
+  }
+}

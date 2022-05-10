@@ -1,0 +1,11 @@
+{
+  "name": "Longevity",
+  "description": "Nymphs are not immortal, but live longer than humans.",
+  "type": "origins:attribute",
+  "modifier": {
+    "name": "Max health increase",
+    "attribute": "minecraft:generic.max_health",
+    "operation": "addition",
+    "value": 4
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "powers": [
+    "pumpkin_patch:dark_sight",
+    "pumpkin_patch:shiny_diet",
+    "pumpkin_patch:power_of_mountains"
+  ],
+  "icon": {
+    "item": "minecraft:stone"
+  },
+  "impact": 2,
+  "name": "Oread",
+  "description": "Mountain spirit who lives in caves, ravines and on/near mountains."
+}

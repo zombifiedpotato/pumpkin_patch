@@ -1,0 +1,13 @@
+{
+  "powers": [
+    "pumpkin_patch:longevity",
+    "pumpkin_patch:stoneskin",
+    "pumpkin_patch:botania_bewitchment"
+  ],
+  "icon": {
+    "item": "minecraft:oak_sapling"
+  },
+  "impact": 2,
+  "name": "Nymph",
+  "description": "Nymphs are regarded as personifications of nature, and are typically tied to a specific part of nature."
+}

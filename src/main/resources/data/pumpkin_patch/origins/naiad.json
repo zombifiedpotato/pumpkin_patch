@@ -1,0 +1,16 @@
+{
+  "powers": [
+    "origins:water_vision",
+    "origins:aqua_affinity",
+    "origins:swim_speed",
+    "origins:aquatic",
+    "origins:like_water",
+    "pumpkin_patch:water_breathing"
+  ],
+  "icon": {
+    "item": "minecraft:nautilus_shell"
+  },
+  "impact": 2,
+  "name": "Naiad",
+  "description": "Water spirit who lives near rivers, springs, fountains and lakes."
+}

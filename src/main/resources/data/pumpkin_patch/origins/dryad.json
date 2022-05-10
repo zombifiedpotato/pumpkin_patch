@@ -1,0 +1,13 @@
+{
+  "powers": [
+    "pumpkin_patch:clarity_of_hearth",
+    "pumpkin_patch:earth_spirit",
+    "pumpkin_patch:vegetarian"
+  ],
+  "icon": {
+    "item": "minecraft:oak_leaves"
+  },
+  "impact": 2,
+  "name": "Dryad",
+  "description": "Nature spirit who lives in trees. It was believed they lived only as long as the tree they inhabited."
+}
