@@ -1,6 +1,6 @@
 {
   "name": "Water Breathing",
-  "description": "You can breathe under the water en on the land.",
+  "description": "You can breathe under water and on the land.",
   "type": "origins:action_over_time",
   "entity_action": {
     "type": "origins:apply_effect",
