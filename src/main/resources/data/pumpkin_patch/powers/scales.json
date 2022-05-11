@@ -1,0 +1,11 @@
+{
+  "name": "Dragon Scales",
+  "description": "You have natural armor, because your skin consists of dragon scales.",
+  "type": "origins:attribute",
+  "modifier": {
+    "name": "Armor increase",
+    "attribute": "minecraft:generic.armor",
+    "operation": "addition",
+    "value": 3
+  }
+}

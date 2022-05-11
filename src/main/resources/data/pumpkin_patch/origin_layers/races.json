@@ -4,6 +4,7 @@
   "origins": [
     "pumpkin_patch:automaton",
     "pumpkin_patch:dwarf",
-    "pumpkin_patch:nymph"
+    "pumpkin_patch:nymph",
+    "pumpkin_patch:dragonborn"
   ]
 }

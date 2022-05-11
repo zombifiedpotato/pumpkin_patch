@@ -1,0 +1,5 @@
+{
+  "name": "Breath Weapon",
+  "description": "You can use a breath weapon, it's type depending on your subrace. It costs extra food when you use it.",
+  "type": "origins:simple"
+}
