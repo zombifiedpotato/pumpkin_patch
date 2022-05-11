@@ -1,6 +1,6 @@
 {
   "name": "Harvesting Arms",
-  "description": "Your arms have been made stronger and faster so you van harvest recourses at an increased speed.",
+  "description": "Your arms have been made specifically for harvesting of resources, resulting in faster gathering rate",
   "type": "origins:action_over_time",
   "entity_action": {
     "type": "origins:apply_effect",

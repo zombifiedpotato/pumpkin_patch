@@ -1,6 +1,6 @@
 {
   "name": "Climbing Tools",
-  "description": "You have some tools builtin for climbing, enabling you to scale vertical walls.",
+  "description": "You have some tools built-in for climbing, enabling you to scale vertical walls.",
   "type": "origins:multiple",
   "toggle": {
     "type": "origins:toggle",

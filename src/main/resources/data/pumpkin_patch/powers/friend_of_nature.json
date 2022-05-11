@@ -19,7 +19,7 @@
   },
   "condition": {
       "type": "pumpkin_patch:entity_type_in_range",
-    "radius": 15,
+    "radius": 8,
       "entity_types": [
         "minecraft:sheep",
         "minecraft:cow",

@@ -1,6 +1,6 @@
 {
   "name": "Build Machine",
-  "description": "You have been modified for combat, giving you an advantage in hand to hand combat.",
+  "description": "You have been modified to build structures more efficiently.",
   "powers": [
     "pumpkin_patch:extended_reach",
     "pumpkin_patch:climbing_tools",
