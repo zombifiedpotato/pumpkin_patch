@@ -1,0 +1,12 @@
+{
+  "powers": [
+    "pumpkin_patch:dragonborn/wings/blue_wings"
+  ],
+  "name": "Blue Lightning Dragon",
+  "description": "Blue dragons are vain and territorial. They soar through the skies preying on caravans and plundering herds and settlements.",
+  "icon": {
+    "item": "icarus:blue_dragon_wings"
+  },
+  "impact": 2,
+  "order": 4
+}

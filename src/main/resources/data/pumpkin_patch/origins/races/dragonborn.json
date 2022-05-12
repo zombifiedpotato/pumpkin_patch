@@ -2,9 +2,9 @@
   "name": "Dragonborn",
   "description": "Dragonborn were a race of draconic creatures native to Abeir. They resemble humanoid dragons and have various features in common with dragons.",
   "powers": [
-    "pumpkin_patch:dragonborn/wings_description",
-    "pumpkin_patch:dragonborn/breath_attack_description",
-    "pumpkin_patch:dragonborn/elemental_description",
+    "pumpkin_patch:dragonborn/wings/wings_description",
+    "pumpkin_patch:dragonborn/breath_attack/breath_attack_description",
+    "pumpkin_patch:dragonborn/elemental/elemental_description",
     "pumpkin_patch:dragonborn/scales",
     "pumpkin_patch:dragonborn/carnivor",
     "pumpkin_patch:spectrum"

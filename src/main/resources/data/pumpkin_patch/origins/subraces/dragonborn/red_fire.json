@@ -1,0 +1,12 @@
+{
+  "powers": [
+    "pumpkin_patch:dragonborn/wings/red_wings"
+  ],
+  "name": "Red Fire Dragon",
+  "description": "Red dragons are the most covetous of true dragons. They tirelessly seek to increase their treasure hoards.",
+  "icon": {
+    "item": "icarus:red_dragon_wings"
+  },
+  "impact": 2,
+  "order": 2
+}

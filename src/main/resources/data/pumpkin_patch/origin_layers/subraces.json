@@ -37,6 +37,23 @@
         "pumpkin_patch:subraces/nymph/naiad",
         "pumpkin_patch:subraces/nymph/oread"
       ]
+    },
+    {
+      "condition": {
+        "type": "origins:origin",
+        "origin": "pumpkin_patch:races/dragonborn",
+        "layer": "pumpkin_patch:races"
+      },
+      "origins": [
+        "pumpkin_patch:subraces/dragonborn/green_poison",
+        "pumpkin_patch:subraces/dragonborn/black_acid",
+        "pumpkin_patch:subraces/dragonborn/copper_acid",
+        "pumpkin_patch:subraces/dragonborn/brass_fire",
+        "pumpkin_patch:subraces/dragonborn/gold_fire",
+        "pumpkin_patch:subraces/dragonborn/red_fire",
+        "pumpkin_patch:subraces/dragonborn/blue_lightning",
+        "pumpkin_patch:subraces/dragonborn/bronze_lightning"
+      ]
     }
   ]
 }

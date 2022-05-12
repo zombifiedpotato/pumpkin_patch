@@ -1,0 +1,12 @@
+{
+  "powers": [
+    "pumpkin_patch:dragonborn/wings/yellow_wings"
+  ],
+  "name": "Gold Fire Dragon",
+  "description": "Gold dragons are the most powerful and majestic of the metallic dragons. They are dedicated foes of evil.",
+  "icon": {
+    "item": "icarus:yellow_dragon_wings"
+  },
+  "impact": 2,
+  "order": 2
+}

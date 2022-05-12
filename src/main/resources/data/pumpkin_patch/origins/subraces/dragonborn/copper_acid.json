@@ -1,0 +1,12 @@
+{
+  "powers": [
+    "pumpkin_patch:dragonborn/wings/brown_wings"
+  ],
+  "name": "Copper Acid Dragon",
+  "description": "Copper dragons are incorrigible pranksters, joke tellers, and riddlers that live in hills and rocky uplands.",
+  "icon": {
+    "item": "icarus:brown_dragon_wings"
+  },
+  "impact": 2,
+  "order": 1
+}

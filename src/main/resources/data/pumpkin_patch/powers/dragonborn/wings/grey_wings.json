@@ -1,0 +1,14 @@
+{
+  "name": "Grey Dragon Wings",
+  "description": "You have permanent grey dragon wings.",
+  "type": "pumpkin_patch:starting_equipment",
+  "stacks": [
+    {
+      "item": "icarus:grey_dragon_wings",
+      "amount": 1,
+      "slot": 38,
+      "tag": "{Enchantments:[{id:\"binding_curse\",lvl:1},{id:\"vanishing_curse\",lvl:1}]}"
+    }
+  ],
+  "recurrent": true
+}

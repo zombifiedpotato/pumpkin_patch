@@ -34,17 +34,19 @@ public class TrinketStarterEquipment extends Power {
     }
 
     private void giveStacks() {
+        System.out.println("items before giving: " + items);
         for (ItemStack item : items) {
             if (entity instanceof PlayerEntity player) {
-                if(!TrinketItem.equipItem(player, item)) {
-                    if(!player.giveItemStack(item)){
-                        player.dropStack(item);
+                if(!TrinketItem.equipItem(player, item.copy())) {
+                    if(!player.giveItemStack(item.copy())){
+                        player.dropStack(item.copy());
                     }
                 }
             }else {
-                entity.dropStack(item);
+                entity.dropStack(item.copy());
             }
         }
+        System.out.println("items after giving: " + items);
     }
 
     @Override
@@ -54,6 +56,7 @@ public class TrinketStarterEquipment extends Power {
 
     @Override
     public void onRespawn() {
+        System.out.println("respawn commencing recurrent is set to " + recurrent);
         if (recurrent){
             giveStacks();
         }

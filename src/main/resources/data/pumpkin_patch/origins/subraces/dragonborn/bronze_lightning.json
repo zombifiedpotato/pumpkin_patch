@@ -1,0 +1,12 @@
+{
+  "powers": [
+    "pumpkin_patch:dragonborn/wings/orange_wings"
+  ],
+  "name": "Bronze Lightning Dragon",
+  "description": "Bronze dragons are coastal dwellers that feed primarily on fish. They take the forms of friendly animals to observe other creatures of interest.",
+  "icon": {
+    "item": "icarus:orange_dragon_wings"
+  },
+  "impact": 2,
+  "order": 4
+}
