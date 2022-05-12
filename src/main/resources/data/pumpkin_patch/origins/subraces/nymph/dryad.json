@@ -1,8 +1,8 @@
 {
   "powers": [
-    "pumpkin_patch:clarity_of_hearth",
-    "pumpkin_patch:earth_spirit",
-    "pumpkin_patch:vegetarian"
+    "pumpkin_patch:nymph/clarity_of_hearth",
+    "pumpkin_patch:nymph/earth_spirit",
+    "pumpkin_patch:dwarf/vegetarian"
   ],
   "icon": {
     "item": "minecraft:oak_leaves"

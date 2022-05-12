@@ -1,6 +1,6 @@
 {
   "name": "Extended Reach",
-  "description": "Your arms are modified so you can reach further away, so you van reach those anoying spots.",
+  "description": "Your arms are modified so you can reach further away, so you can reach those anoying spots.",
   "type": "origins:attribute",
   "modifiers": [
     {

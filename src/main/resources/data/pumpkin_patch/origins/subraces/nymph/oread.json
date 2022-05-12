@@ -1,8 +1,8 @@
 {
   "powers": [
-    "pumpkin_patch:dark_sight",
-    "pumpkin_patch:shiny_diet",
-    "pumpkin_patch:power_of_mountains"
+    "pumpkin_patch:dwarf/dark_sight",
+    "pumpkin_patch:dwarf/shiny_diet",
+    "pumpkin_patch:nymph/power_of_mountains"
   ],
   "icon": {
     "item": "minecraft:stone"

@@ -5,37 +5,37 @@
     {
       "condition": {
         "type": "origins:origin",
-        "origin": "pumpkin_patch:dwarf",
+        "origin": "pumpkin_patch:races/dwarf",
         "layer": "pumpkin_patch:races"
       },
       "origins": [
-        "pumpkin_patch:duergar",
-        "pumpkin_patch:urdunnir",
-        "pumpkin_patch:dur_authalar"
+        "pumpkin_patch:subraces/dwarf/duergar",
+        "pumpkin_patch:subraces/dwarf/urdunnir",
+        "pumpkin_patch:subraces/dwarf/dur_authalar"
       ]
     },
     {
       "condition": {
         "type": "origins:origin",
-        "origin": "pumpkin_patch:automaton",
+        "origin": "pumpkin_patch:races/automaton",
         "layer": "pumpkin_patch:races"
       },
       "origins": [
-        "pumpkin_patch:war_machine",
-        "pumpkin_patch:harvest_machine",
-        "pumpkin_patch:build_machine"
+        "pumpkin_patch:subraces/automaton/war_machine",
+        "pumpkin_patch:subraces/automaton/harvest_machine",
+        "pumpkin_patch:subraces/automaton/build_machine"
       ]
     },
     {
       "condition": {
         "type": "origins:origin",
-        "origin": "pumpkin_patch:nymph",
+        "origin": "pumpkin_patch:races/nymph",
         "layer": "pumpkin_patch:races"
       },
       "origins": [
-        "pumpkin_patch:dryad",
-        "pumpkin_patch:naiad",
-        "pumpkin_patch:oread"
+        "pumpkin_patch:subraces/nymph/dryad",
+        "pumpkin_patch:subraces/nymph/naiad",
+        "pumpkin_patch:subraces/nymph/oread"
       ]
     }
   ]

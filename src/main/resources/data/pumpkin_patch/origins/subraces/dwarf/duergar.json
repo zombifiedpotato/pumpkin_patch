@@ -1,8 +1,8 @@
 {
   "powers": [
-    "pumpkin_patch:fear_of_slavery",
-    "pumpkin_patch:slavers_hate",
-    "pumpkin_patch:dark_sight"
+    "pumpkin_patch:dwarf/fear_of_slavery",
+    "pumpkin_patch:dwarf/slavers_hate",
+    "pumpkin_patch:dwarf/dark_sight"
   ],
   "icon": {
     "item": "minecraft:lead"

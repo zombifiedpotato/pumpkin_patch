@@ -2,9 +2,9 @@
   "replace": true,
   "order": 0,
   "origins": [
-    "pumpkin_patch:automaton",
-    "pumpkin_patch:dwarf",
-    "pumpkin_patch:nymph",
-    "pumpkin_patch:dragonborn"
+    "pumpkin_patch:races/automaton",
+    "pumpkin_patch:races/dwarf",
+    "pumpkin_patch:races/nymph",
+    "pumpkin_patch:races/dragonborn"
   ]
 }

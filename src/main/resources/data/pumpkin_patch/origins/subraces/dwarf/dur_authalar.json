@@ -1,9 +1,9 @@
 {
   "powers": [
-    "pumpkin_patch:mechanical_wings",
-    "pumpkin_patch:mechanical_wings_starterpack",
-    "pumpkin_patch:vegetarian",
-    "pumpkin_patch:friend_of_nature"
+    "pumpkin_patch:dwarf/mechanical_wings",
+    "pumpkin_patch:dwarf/mechanical_wings_starterpack",
+    "pumpkin_patch:dwarf/vegetarian",
+    "pumpkin_patch:dwarf/friend_of_nature"
   ],
   "icon": {
     "item": "icarus:orange_mechanical_leather_wings"

@@ -1,7 +1,7 @@
 {
   "powers": [
-    "pumpkin_patch:longevity",
-    "pumpkin_patch:stoneskin",
+    "pumpkin_patch:nymph/longevity",
+    "pumpkin_patch:nymph/stoneskin",
     "pumpkin_patch:botania_bewitchment"
   ],
   "icon": {

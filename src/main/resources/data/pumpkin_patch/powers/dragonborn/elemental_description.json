@@ -1,0 +1,5 @@
+{
+  "name": "Elemental resistance",
+  "description": "You are resistant to the element of your subrace, but weaker to an other.",
+  "type": "origins:simple"
+}

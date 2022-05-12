@@ -2,9 +2,9 @@
   "name": "Build Machine",
   "description": "You have been modified to build structures more efficiently.",
   "powers": [
-    "pumpkin_patch:extended_reach",
-    "pumpkin_patch:climbing_tools",
-    "pumpkin_patch:no_climbing_failure_system"
+    "pumpkin_patch:automaton/extended_reach",
+    "pumpkin_patch:automaton/climbing_tools",
+    "pumpkin_patch:automaton/no_climbing_failure_system"
   ],
   "icon": {
     "item": "minecraft:crafting_table"

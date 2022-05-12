@@ -2,9 +2,9 @@
   "name": "Harvest Machine",
   "description": "You have been modified for efficient harvesting of recourses.",
   "powers": [
-    "pumpkin_patch:knee_servos",
-    "pumpkin_patch:harvesting_arms",
-    "pumpkin_patch:not_for_combat"
+    "pumpkin_patch:automaton/knee_servos",
+    "pumpkin_patch:automaton/harvesting_arms",
+    "pumpkin_patch:automaton/not_for_combat"
   ],
   "icon": {
     "item": "minecraft:iron_axe"
