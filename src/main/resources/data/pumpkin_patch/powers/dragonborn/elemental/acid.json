@@ -1,0 +1,37 @@
+{
+  "name": "Acid Elemental",
+  "description": "You are more resistant to wither effect, but less against poison.",
+  "type": "origins:multiple",
+  "wither_resistance_amplifier": {
+    "type": "origins:modify_status_effect_amplifier",
+    "status_effect": "minecraft:wither",
+    "modifier": {
+      "operation": "addition",
+      "value": -2
+    }
+  },
+  "wither_resistance_duration": {
+    "type": "origins:modify_status_effect_duration",
+    "status_effect": "minecraft:wither",
+    "modifier": {
+      "operation": "multiply_total",
+      "value": -0.5
+    }
+  },
+  "poison_weakness_amplifier": {
+    "type": "origins:modify_status_effect_amplifier",
+    "status_effect": "minecraft:poison",
+    "modifier": {
+      "operation": "addition",
+      "value": 1
+    }
+  },
+  "poison_weakness_duration": {
+    "type": "origins:modify_status_effect_duration",
+    "status_effect": "minecraft:poison",
+    "modifier": {
+      "operation": "multiply_total",
+      "value": 0.5
+    }
+  }
+}

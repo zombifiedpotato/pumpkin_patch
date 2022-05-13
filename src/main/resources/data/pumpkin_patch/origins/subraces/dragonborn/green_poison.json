@@ -1,6 +1,7 @@
 {
   "powers": [
-    "pumpkin_patch:dragonborn/wings/green_wings"
+    "pumpkin_patch:dragonborn/wings/green_wings",
+    "pumpkin_patch:dragonborn/elemental/poison"
   ],
   "name": "Green Poison Dragon",
   "description": "Green dragons are the most cunning and treacherous of true dragons, using misdirection and trickery to get the upper hand against their enemies.",

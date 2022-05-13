@@ -1,0 +1,37 @@
+{
+  "name": "Poison Elemental",
+  "description": "You are more resistant to poison effect, but less against wither.",
+  "type": "origins:multiple",
+  "poison_resistance_amplifier": {
+    "type": "origins:modify_status_effect_amplifier",
+    "status_effect": "minecraft:poison",
+    "modifier": {
+      "operation": "addition",
+      "value": -2
+    }
+  },
+  "poison_resistance_duration": {
+    "type": "origins:modify_status_effect_duration",
+    "status_effect": "minecraft:poison",
+    "modifier": {
+      "operation": "multiply_total",
+      "value": -0.5
+    }
+  },
+  "wither_weakness_amplifier": {
+    "type": "origins:modify_status_effect_amplifier",
+    "status_effect": "minecraft:wither",
+    "modifier": {
+      "operation": "addition",
+      "value": 1
+    }
+  },
+  "wither_weakness_duration": {
+    "type": "origins:modify_status_effect_duration",
+    "status_effect": "minecraft:wither",
+    "modifier": {
+      "operation": "multiply_total",
+      "value": 0.5
+    }
+  }
+}

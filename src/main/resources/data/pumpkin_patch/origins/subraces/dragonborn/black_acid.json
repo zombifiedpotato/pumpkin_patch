@@ -1,6 +1,7 @@
 {
   "powers": [
-    "pumpkin_patch:dragonborn/wings/grey_wings"
+    "pumpkin_patch:dragonborn/wings/grey_wings",
+    "pumpkin_patch:dragonborn/elemental/acid"
   ],
   "name": "Black Acid Dragon",
   "description": "Black dragons are the most evil-tempered and vile of chromatic dragons, they collect the wreckage and treasures of fallen peoples.",

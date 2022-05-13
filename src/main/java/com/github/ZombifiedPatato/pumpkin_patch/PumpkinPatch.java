@@ -1,6 +1,7 @@
 package com.github.ZombifiedPatato.pumpkin_patch;
 
 import com.github.ZombifiedPatato.pumpkin_patch.block.ModBlocks;
+import com.github.ZombifiedPatato.pumpkin_patch.effect.ModEffects;
 import com.github.ZombifiedPatato.pumpkin_patch.entity.ModEntities;
 import com.github.ZombifiedPatato.pumpkin_patch.item.ModItems;
 import com.github.ZombifiedPatato.pumpkin_patch.origins.condition.ModConditions;
@@ -25,6 +26,7 @@ public class PumpkinPatch implements ModInitializer {
 		ModParticles.registerModParticles();
 		ModConditions.registerModConditions();
 		ModPowers.registerPowers();
+		ModEffects.registerEffects();
 		registerPortals();
 	}
 

@@ -1,6 +1,7 @@
 {
   "powers": [
-    "pumpkin_patch:dragonborn/wings/red_wings"
+    "pumpkin_patch:dragonborn/wings/red_wings",
+    "pumpkin_patch:dragonborn/elemental/fire"
   ],
   "name": "Red Fire Dragon",
   "description": "Red dragons are the most covetous of true dragons. They tirelessly seek to increase their treasure hoards.",
