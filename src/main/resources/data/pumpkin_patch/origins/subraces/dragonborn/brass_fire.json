@@ -1,6 +1,7 @@
 {
   "powers": [
-    "pumpkin_patch:dragonborn/wings/brown_wings"
+    "pumpkin_patch:dragonborn/wings/brown_wings",
+    "pumpkin_patch:dragonborn/elemental/fire"
   ],
   "name": "Brass Fire Dragon",
   "description": "Brass dragons are the most gregarious of the true dragons. They crave conversation, sunlight and hot dry climates.",

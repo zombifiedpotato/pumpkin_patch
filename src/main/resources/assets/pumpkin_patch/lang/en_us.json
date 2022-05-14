@@ -6,5 +6,7 @@
   "itemGroup.pumpkin_patch.pumpkin_patch": "Pumpkin Patch",
 
   "layer.pumpkin_patch.races.name": "Race",
-  "layer.pumpkin_patch.subraces.name": "Subrace"
+  "layer.pumpkin_patch.subraces.name": "Subrace",
+
+  "effect.pumpkin_patch.lightning": "Electrified"
 }

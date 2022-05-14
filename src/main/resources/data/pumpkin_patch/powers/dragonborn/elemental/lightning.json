@@ -1,10 +1,10 @@
 {
   "name": "Lightning Elemental",
-  "description": "You are more resistant to lightning effect, but less against [INSERT EFFECT].",
+  "description": "You are more resistant to lightning effect, but less against fire.",
   "type": "origins:multiple",
   "wither_resistance_amplifier": {
     "type": "origins:modify_status_effect_amplifier",
-    "status_effect": "minecraft:wither",
+    "status_effect": "pumpkin_patch:lightning",
     "modifier": {
       "operation": "addition",
       "value": -2
@@ -12,23 +12,29 @@
   },
   "wither_resistance_duration": {
     "type": "origins:modify_status_effect_duration",
-    "status_effect": "minecraft:wither",
+    "status_effect": "pumpkin_patch:lightning",
     "modifier": {
       "operation": "multiply_total",
       "value": -0.5
     }
   },
-  "poison_weakness_amplifier": {
-    "type": "origins:modify_status_effect_amplifier",
-    "status_effect": "minecraft:poison",
+  "infire_weakness": {
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+      "type": "origins:name",
+      "name": "inFire"
+    },
     "modifier": {
-      "operation": "addition",
-      "value": 1
+      "operation": "multiply_total",
+      "value": 0.5
     }
   },
-  "poison_weakness_duration": {
-    "type": "origins:modify_status_effect_duration",
-    "status_effect": "minecraft:poison",
+  "onfire_weakness": {
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+      "type": "origins:name",
+      "name": "onFire"
+    },
     "modifier": {
       "operation": "multiply_total",
       "value": 0.5
