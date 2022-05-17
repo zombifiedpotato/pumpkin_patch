@@ -1,0 +1,22 @@
+{
+  "name": "Fire Breath Attack",
+  "description": "You have a fire breath attack which shoots fire in a 5 block cone",
+  "type": "pumpkin_patch:breath_weapon",
+  "cooldown": 300,
+  "hud_render": {
+    "bar_index": 4
+  },
+  "key": {
+    "key": "key.origins.primary_active",
+    "continous": true
+  },
+  "effect": {
+    "effect": "minecraft:wither",
+    "amplifier": 1,
+    "duration": 100
+  },
+  "setFire": true,
+  "damage": 2.5,
+  "isCone": true
+
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Acid Breath Attack",
+  "description": "You have An acid breath attack which shoots acid in a 20 block line",
+  "type": "pumpkin_patch:breath_weapon",
+  "cooldown": 300,
+  "hud_render": {
+    "bar_index": 4
+  },
+  "key": {
+    "key": "key.origins.primary_active",
+    "continous": true
+  },
+  "effect": {
+    "effect": "minecraft:wither",
+    "amplifier": 1,
+    "duration": 100
+  },
+  "setFire": true,
+  "damage": 2.5
+
+}
