@@ -80,11 +80,56 @@ If you have any suggestions let me know!
       - Dark Sight: When not exposed to sunlight you will have better sight.
       - Shiny Diet: You can only feed on stone, iron ingot, gold ingot, emerald, diamond and netherite ingot.
       - Power Of Mountains: You have stronger legs and are thus faster and jump higher.
+  
+- Dragonborn: Dragonborn were a race of draconic creatures native to Abeir. They resemble humanoid dragons and have various features in common with dragons.
+  - General Powers:
+    - Dragon Scales: You have natural armor, because your skin consists of dragon scales.
+    - Carnivor: Because you are half dragon, you only eat meat.
+    - Spectrum: You have access to the items from the Spectrum mod!
+    - Dragon Wings: You have a pair of permanent dragon wings on your back. The color depends on your subrace.
+    - Breath Weapon: You can use a breath weapon, it's type depending on your subrace. It costs extra food when you use it. (UNDER DEVELOPMENT)
+    - Elemental: You are resistant to the element of your subrace, but weaker to an other.
+  - Suborigins:
+    - Black Acid Dragon: Black dragons are the most evil-tempered and vile of chromatic dragons, they collect the wreckage and treasures of fallen peoples.
+      - Breath Weapon: 15 block line.
+      - Elemental: You are more resistant to wither effect, but less against poison.
+      - Wing Color: Grey.
+    - Blue Lightning Dragon: Blue dragons are vain and territorial. They soar through the skies preying on caravans and plundering herds and settlements.
+      - Breath Weapon: 15 block line.
+      - Elemental: You are more resistant to lightning effect, but less against fire.
+      - Wing Color: Blue.
+    - Brass Fire Dragon: Brass dragons are the most gregarious of the true dragons. They crave conversation, sunlight and hot dry climates.
+      - Breath Weapon: 15 block line.
+      - Elemental: You are more resistant to fire (not lava), but less against projectiles.
+      - Wing Color: Brown.
+    - Bronze Lightning Dragon: Bronze dragons are coastal dwellers that feed primarily on fish. They take the forms of friendly animals to observe other creatures of interest.
+      - Breath Weapon: 15 block line.
+      - Elemental: You are more resistant to lightning effect, but less against fire.
+      - Wing Color: Orange.
+    - Copper Acid Dragon: Copper dragons are incorrigible pranksters, joke tellers, and riddlers that live in hills and rocky uplands.
+      - Breath Weapon: 15 block line.
+      - Elemental: You are more resistant to wither effect, but less against poison.
+      - Wing Color: Brown.
+    - Gold Fire Dragon: Gold dragons are the most powerful and majestic of the metallic dragons. They are dedicated foes of evil.
+      - Breath Weapon: 5 block cone.
+      - Elemental: You are more resistant to fire (not lava), but less against projectiles.
+      - Wing Color: Yellow.
+    - Green Poison Dragon: Green dragons are the most cunning and treacherous of true dragons, using misdirection and trickery to get the upper hand against their enemies.
+      - Breath Weapon: 5 block cone.
+      - Elemental: You are more resistant to poison effect, but less against wither.
+      - Wing Color: Green.
+    - Red Fire Dragon: Red dragons are the most covetous of true dragons. They tirelessly seek to increase their treasure hoards.
+      - Breath Weapon: 5 block cone.
+      - Elemental: You are more resistant to fire (not lava), but less against projectiles.
+      - Wing Color: Red.
   </details>
   
   <details> <summary> Currently Planned </summary>  
   
- 
-  - Draconian: WILL ADD DESCRIPTION LATER
+  - Arakochra race and subraces
+  
+  - Sorcerer race and subraces
+  
+  - Draconian Breath Weapon (will be added somwhere after first release, don't use breath weapon powers before that if you use custom datapack as the don't work correctly)
   </details>
 
