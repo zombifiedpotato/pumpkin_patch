@@ -18,6 +18,7 @@ import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.projectile.ProjectileUtil;
+import net.minecraft.particle.ParticleEffect;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
@@ -90,6 +91,9 @@ public class BreathWeapon extends CooldownPower implements Active {
         ).allowCondition();
     }
 
+    /**
+     * Method to determine if breathweapon can be used
+     */
     @Override
     public void onUse() {
         if(canUse()) {
@@ -97,6 +101,9 @@ public class BreathWeapon extends CooldownPower implements Active {
         }
     }
 
+    /**
+     * Method which activates the breath weapon.
+     */
     @Override
     public void use() {
         LivingEntity e = this.entity;
@@ -116,24 +123,44 @@ public class BreathWeapon extends CooldownPower implements Active {
         super.use();
     }
 
+    /**
+     * Method to get targets for breath weapon and calls particle spawner.
+     * @return All entities which are effected by the breath weapon.
+     */
     private List<LivingEntity> getTargets() {
 
         List<LivingEntity> entityTargets = new LinkedList<>();
         Vec3d origin = new Vec3d(this.entity.getX(), this.entity.getY(), this.entity.getZ());
         Vec3d direction = this.entity.getRotationVec(1);
+        Vec3d target;
         Box box;
         if (isCone) {
-            Vec3d target = origin.add(direction.multiply(5));
+            // Calculate entity list for when shape is cone
+            target = origin.add(direction.multiply(5));
             box = this.entity.getBoundingBox().stretch(target.subtract(origin)).stretch(target.subtract(origin).rotateY(90)).expand(1.0D,1.0D,1.0D);
         } else {
-            Vec3d target = origin.add(direction.multiply(10));
+            // Calculate entity list for when shape is line (not cone)
+            target = origin.add(direction.multiply(10));
             box = this.entity.getBoundingBox().stretch(target.subtract(origin));
         }
-        this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, box.getCenter().getX(), box.getCenter().getY(), box.getCenter().getZ(),0,0,0);
-        this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, box.maxX, box.maxY, box.maxZ,0,0,0);
-        this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, box.minX, box.minY, box.minZ,0,0,0);
 
+        // ToDo DEBUG_START
+        this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, origin.getX(), origin.getY(), origin.getZ(), 0, 0, 0);
+        this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, direction.getX(), direction.getY(), direction.getZ(), 0, 0, 0);
+        this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, target.getX(), target.getY(), target.getZ(), 0, 0, 0);
+//        this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, box.getCenter().getX(), box.getCenter().getY(), box.getCenter().getZ(),0,0,0);
+//        this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, box.maxX, box.maxY, box.maxZ,0,0,0);
+//        this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, box.minX, box.minY, box.minZ,0,0,0);
+        System.out.println("origin: " + origin);
+        System.out.println("direction: " + direction);
+        System.out.println("target: " + target);
+        System.out.println("box: " + box);
+
+        // ToDo DEBUG_END
+
+        // ToDo check distance from this.entity to all entities in list
         List<Entity> entities = this.entity.getEntityWorld().getOtherEntities(this.entity, box);
+        // filter out all nonliving entities (can be done with stream probably)
         for (Entity entity1 : entities) {
             if (entity1 instanceof LivingEntity livingEntity) {
                 entityTargets.add(livingEntity);
