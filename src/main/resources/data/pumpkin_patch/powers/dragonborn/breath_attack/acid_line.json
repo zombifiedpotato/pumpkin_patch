@@ -2,7 +2,7 @@
   "name": "Acid Breath Attack",
   "description": "You have An acid breath attack which shoots acid in a 20 block line",
   "type": "pumpkin_patch:breath_weapon",
-  "cooldown": 300,
+  "cooldown": 20,
   "hud_render": {
     "bar_index": 4
   },

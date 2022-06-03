@@ -19,6 +19,7 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.projectile.ProjectileUtil;
 import net.minecraft.particle.ParticleEffect;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
@@ -133,19 +134,21 @@ public class BreathWeapon extends CooldownPower implements Active {
         Vec3d origin = this.entity.getEyePos();
         Vec3d direction = this.entity.getRotationVec(1);
         Vec3d target;
+        Vec3d targetPointBox;
+        Vec3d originPointBox;
         Box box;
         if (isCone) {
             // Calculate entity list for when shape is cone
             target = origin.add(direction.multiply(5));
-            Vec3d targetPointBox = target;
-            Vec3d originPointBox = origin;
+            targetPointBox = target;
+            originPointBox = origin;
             box = new Box(targetPointBox, originPointBox);
         } else {
             // Calculate entity list for when shape is line (not cone)
             target = origin.add(direction.multiply(10));
             // ToDo need to get a vector with min values and max values, not just any values as it will result in invalid box
-            Vec3d targetPointBox = target.add(new Vec3d(-direction.getY(), direction.getX(), 0).multiply(0.5));
-            Vec3d originPointBox = origin.subtract(new Vec3d(-direction.getY(), direction.getX(), 0).multiply(0.5));
+            targetPointBox = target.add(new Vec3d(-direction.getY(), direction.getX(), 0).multiply(2));
+            originPointBox = origin.subtract(new Vec3d(-direction.getY(), direction.getX(), 0).multiply(2));
             box = new Box(targetPointBox, originPointBox);
         }
 
@@ -153,12 +156,16 @@ public class BreathWeapon extends CooldownPower implements Active {
         this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, origin.getX(), origin.getY(), origin.getZ(), 0, 0, 0);
         this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, direction.getX(), direction.getY(), direction.getZ(), 0, 0, 0);
         this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, target.getX(), target.getY(), target.getZ(), 0, 0, 0);
-        this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, box.getCenter().getX(), box.getCenter().getY(), box.getCenter().getZ(),0,0,0);
-        this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, box.maxX, box.maxY, box.maxZ,0,0,0);
-        this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, box.minX, box.minY, box.minZ,0,0,0);
+        this.entity.getWorld().addImportantParticle(ParticleTypes.CAMPFIRE_SIGNAL_SMOKE, targetPointBox.getX(), targetPointBox.getY(), targetPointBox.getZ(), 0, 0, 0);
+        this.entity.getWorld().addImportantParticle(ParticleTypes.CAMPFIRE_SIGNAL_SMOKE, originPointBox.getX(), originPointBox.getY(), originPointBox.getZ(), 0, 0, 0);
+        this.entity.getWorld().addImportantParticle(ParticleTypes.ANGRY_VILLAGER, box.getCenter().getX(), box.getCenter().getY(), box.getCenter().getZ(),0,0,0);
+        this.entity.getWorld().addImportantParticle(ParticleTypes.ANGRY_VILLAGER, box.maxX, box.maxY, box.maxZ,0,0,0);
+        this.entity.getWorld().addImportantParticle(ParticleTypes.ANGRY_VILLAGER, box.minX, box.minY, box.minZ,0,0,0);
         System.out.println("origin: " + origin);
         System.out.println("direction: " + direction);
         System.out.println("target: " + target);
+        System.out.println("originPointBox: " + originPointBox);
+        System.out.println("targetPointBox: " + targetPointBox);
         System.out.println("box: " + box);
 
         // ToDo DEBUG_END
