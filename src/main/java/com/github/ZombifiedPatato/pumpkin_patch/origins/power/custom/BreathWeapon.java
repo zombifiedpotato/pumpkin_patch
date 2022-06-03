@@ -130,27 +130,32 @@ public class BreathWeapon extends CooldownPower implements Active {
     private List<LivingEntity> getTargets() {
 
         List<LivingEntity> entityTargets = new LinkedList<>();
-        Vec3d origin = new Vec3d(this.entity.getX(), this.entity.getY(), this.entity.getZ());
+        Vec3d origin = this.entity.getEyePos();
         Vec3d direction = this.entity.getRotationVec(1);
         Vec3d target;
         Box box;
         if (isCone) {
             // Calculate entity list for when shape is cone
             target = origin.add(direction.multiply(5));
-            box = this.entity.getBoundingBox().stretch(target.subtract(origin)).stretch(target.subtract(origin).rotateY(90)).expand(1.0D,1.0D,1.0D);
+            Vec3d targetPointBox = target;
+            Vec3d originPointBox = origin;
+            box = new Box(targetPointBox, originPointBox);
         } else {
             // Calculate entity list for when shape is line (not cone)
             target = origin.add(direction.multiply(10));
-            box = this.entity.getBoundingBox().stretch(target.subtract(origin));
+            // ToDo need to get a vector with min values and max values, not just any values as it will result in invalid box
+            Vec3d targetPointBox = target.add(new Vec3d(-direction.getY(), direction.getX(), 0).multiply(0.5));
+            Vec3d originPointBox = origin.subtract(new Vec3d(-direction.getY(), direction.getX(), 0).multiply(0.5));
+            box = new Box(targetPointBox, originPointBox);
         }
 
         // ToDo DEBUG_START
         this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, origin.getX(), origin.getY(), origin.getZ(), 0, 0, 0);
         this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, direction.getX(), direction.getY(), direction.getZ(), 0, 0, 0);
         this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, target.getX(), target.getY(), target.getZ(), 0, 0, 0);
-//        this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, box.getCenter().getX(), box.getCenter().getY(), box.getCenter().getZ(),0,0,0);
-//        this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, box.maxX, box.maxY, box.maxZ,0,0,0);
-//        this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, box.minX, box.minY, box.minZ,0,0,0);
+        this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, box.getCenter().getX(), box.getCenter().getY(), box.getCenter().getZ(),0,0,0);
+        this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, box.maxX, box.maxY, box.maxZ,0,0,0);
+        this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, box.minX, box.minY, box.minZ,0,0,0);
         System.out.println("origin: " + origin);
         System.out.println("direction: " + direction);
         System.out.println("target: " + target);
