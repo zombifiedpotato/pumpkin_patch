@@ -111,10 +111,11 @@ public class BreathWeapon extends CooldownPower implements Active {
                 target.setOnFireFor(10);
             }
             for (StatusEffectInstance effect : effects) {
-                target.setStatusEffect(effect, e);
+                target.setStatusEffect(new StatusEffectInstance(effect), e);
             }
         }
         super.use();
+        System.out.println(effects);
     }
 
     /**
@@ -134,7 +135,7 @@ public class BreathWeapon extends CooldownPower implements Active {
             Vec3d lengthVector = forwardDirection.multiply(5);
             Vec3d heightVector = upDirection.multiply(2);
             Vec3d widthVector = sideDirection.multiply(4);
-            Vec3d originPoint = origin.subtract(widthVector).subtract(heightVector.multiply(0.5));
+            Vec3d originPoint = origin.subtract(widthVector.multiply(0.5)).subtract(heightVector.multiply(0.5));
             box = new Box(originPoint, heightVector, widthVector, lengthVector);
             List<LivingEntity> entityTargetsTemp = box.getOtherLivingEntities(entity);
             entityTargets = new LinkedList<>();
@@ -145,9 +146,9 @@ public class BreathWeapon extends CooldownPower implements Active {
             }
         } else {
             // Calculate entity list for when shape is line (not cone)
-            Vec3d lengthVector = forwardDirection.multiply(10);
-            Vec3d heightVector = upDirection.multiply(2); //probably problem
-            Vec3d widthVector = sideDirection.multiply(2);
+            Vec3d lengthVector = forwardDirection.multiply(15);
+            Vec3d heightVector = upDirection.multiply(1);
+            Vec3d widthVector = sideDirection.multiply(1);
             Vec3d originPoint = origin.subtract(widthVector.multiply(0.5)).subtract(heightVector.multiply(0.5));
             box = new Box(originPoint, heightVector, widthVector, lengthVector);
             entityTargets = box.getOtherLivingEntities(entity);
@@ -173,20 +174,26 @@ public class BreathWeapon extends CooldownPower implements Active {
         this.entity.getWorld().addImportantParticle(ParticleTypes.CAMPFIRE_SIGNAL_SMOKE, rightUpFarPoint.getX(), rightUpFarPoint.getY(), rightUpFarPoint.getZ(), 0, 0, 0);
         this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, rightDownFarPoint.getX(), rightDownFarPoint.getY(), rightDownFarPoint.getZ(), 0, 0, 0);
 
-        System.out.println("origin: " + origin);
-        System.out.println("forward direction: " + forwardDirection);
-        System.out.println("up direction: " + upDirection);
-        System.out.println("side direction: " + sideDirection);
-        System.out.println("box: " + box);
-        System.out.println("box heightPoint: " + leftUpPoint);
-        System.out.println("box widthPoint: " + rightDownPoint);
-        System.out.println("box lengthPoint: " + leftDownFarPoint);
-        System.out.println("targets: " + entityTargets);
+//        System.out.println("origin: " + origin);
+//        System.out.println("forward direction: " + forwardDirection);
+//        System.out.println("up direction: " + upDirection);
+//        System.out.println("side direction: " + sideDirection);
+//        System.out.println("box: " + box);
+//        System.out.println("box heightPoint: " + leftUpPoint);
+//        System.out.println("box widthPoint: " + rightDownPoint);
+//        System.out.println("box lengthPoint: " + leftDownFarPoint);
+//        System.out.println("targets: " + entityTargets);
 
         // ToDo DEBUG_END
         return entityTargets;
     }
 
+    /**
+     * Copy of Entity.getRotationVector to put in own pitch and yaw.
+     * @param pitch to use for calculation
+     * @param yaw to use for calculation
+     * @return A 3d Vector which points in the direction calculated from pitch and yaw
+     */
     private Vec3d getRotationVec(float pitch, float yaw) {
         float f = pitch * ((float)Math.PI / 180);
         float g = -yaw * ((float)Math.PI / 180);
