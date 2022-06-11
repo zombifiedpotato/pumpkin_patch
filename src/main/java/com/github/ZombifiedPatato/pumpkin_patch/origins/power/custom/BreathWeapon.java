@@ -2,6 +2,7 @@ package com.github.ZombifiedPatato.pumpkin_patch.origins.power.custom;
 
 import com.github.ZombifiedPatato.pumpkin_patch.PumpkinPatch;
 import com.github.ZombifiedPatato.pumpkin_patch.particle.ModParticles;
+import com.github.ZombifiedPatato.pumpkin_patch.utility.Box;
 import io.github.apace100.apoli.data.ApoliDataTypes;
 import io.github.apace100.apoli.power.Active;
 import io.github.apace100.apoli.power.CooldownPower;
@@ -11,28 +12,20 @@ import io.github.apace100.apoli.power.factory.PowerFactory;
 import io.github.apace100.apoli.util.HudRender;
 import io.github.apace100.calio.data.SerializableData;
 import io.github.apace100.calio.data.SerializableDataTypes;
-import io.github.apace100.origins.data.OriginsDataTypes;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.projectile.ProjectileUtil;
-import net.minecraft.particle.ParticleEffect;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.hit.EntityHitResult;
-import net.minecraft.util.hit.HitResult;
-import net.minecraft.util.math.Box;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
-import net.minecraft.world.RaycastContext;
 
 import java.util.LinkedList;
 import java.util.List;
 
 public class BreathWeapon extends CooldownPower implements Active {
 
-    private List<StatusEffectInstance> effects = new LinkedList<>();
+    private final List<StatusEffectInstance> effects = new LinkedList<>();
     private boolean setFire;
     private float damage;
     private boolean isCone;
@@ -60,7 +53,7 @@ public class BreathWeapon extends CooldownPower implements Active {
         effects.add(effect);
     }
 
-    public static PowerFactory createFactory() {
+    public static PowerFactory<Power> createFactory() {
         return new PowerFactory<>(new Identifier(PumpkinPatch.MOD_ID, "breath_weapon"),
                 new SerializableData()
                         .add("cooldown", SerializableDataTypes.INT, 1)
@@ -130,55 +123,78 @@ public class BreathWeapon extends CooldownPower implements Active {
      */
     private List<LivingEntity> getTargets() {
 
-        List<LivingEntity> entityTargets = new LinkedList<>();
+        List<LivingEntity> entityTargets;
         Vec3d origin = this.entity.getEyePos();
-        Vec3d direction = this.entity.getRotationVec(1);
-        Vec3d target;
-        Vec3d targetPointBox;
-        Vec3d originPointBox;
+        Vec3d forwardDirection = this.entity.getRotationVec(1).normalize();
+        Vec3d upDirection = getRotationVec(this.entity.getPitch()-90, this.entity.getYaw()).normalize();
+        Vec3d sideDirection = getRotationVec(0, this.entity.getYaw()+90).normalize();
         Box box;
         if (isCone) {
             // Calculate entity list for when shape is cone
-            target = origin.add(direction.multiply(5));
-            targetPointBox = target;
-            originPointBox = origin;
-            box = new Box(targetPointBox, originPointBox);
+            Vec3d lengthVector = forwardDirection.multiply(5);
+            Vec3d heightVector = upDirection.multiply(2);
+            Vec3d widthVector = sideDirection.multiply(4);
+            Vec3d originPoint = origin.subtract(widthVector).subtract(heightVector.multiply(0.5));
+            box = new Box(originPoint, heightVector, widthVector, lengthVector);
+            List<LivingEntity> entityTargetsTemp = box.getOtherLivingEntities(entity);
+            entityTargets = new LinkedList<>();
+            for (LivingEntity e : entityTargetsTemp) {
+                if (this.entity.distanceTo(e) <= 5.2) {
+                    entityTargets.add(e);
+                }
+            }
         } else {
             // Calculate entity list for when shape is line (not cone)
-            target = origin.add(direction.multiply(10));
-            // ToDo need to get a vector with min values and max values, not just any values as it will result in invalid box
-            targetPointBox = target.add(new Vec3d(-direction.getY(), direction.getX(), 0).multiply(2));
-            originPointBox = origin.subtract(new Vec3d(-direction.getY(), direction.getX(), 0).multiply(2));
-            box = new Box(targetPointBox, originPointBox);
+            Vec3d lengthVector = forwardDirection.multiply(10);
+            Vec3d heightVector = upDirection.multiply(2); //probably problem
+            Vec3d widthVector = sideDirection.multiply(2);
+            Vec3d originPoint = origin.subtract(widthVector.multiply(0.5)).subtract(heightVector.multiply(0.5));
+            box = new Box(originPoint, heightVector, widthVector, lengthVector);
+            entityTargets = box.getOtherLivingEntities(entity);
         }
 
         // ToDo DEBUG_START
-        this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, origin.getX(), origin.getY(), origin.getZ(), 0, 0, 0);
-        this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, direction.getX(), direction.getY(), direction.getZ(), 0, 0, 0);
-        this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, target.getX(), target.getY(), target.getZ(), 0, 0, 0);
-        this.entity.getWorld().addImportantParticle(ParticleTypes.CAMPFIRE_SIGNAL_SMOKE, targetPointBox.getX(), targetPointBox.getY(), targetPointBox.getZ(), 0, 0, 0);
-        this.entity.getWorld().addImportantParticle(ParticleTypes.CAMPFIRE_SIGNAL_SMOKE, originPointBox.getX(), originPointBox.getY(), originPointBox.getZ(), 0, 0, 0);
-        this.entity.getWorld().addImportantParticle(ParticleTypes.ANGRY_VILLAGER, box.getCenter().getX(), box.getCenter().getY(), box.getCenter().getZ(),0,0,0);
-        this.entity.getWorld().addImportantParticle(ParticleTypes.ANGRY_VILLAGER, box.maxX, box.maxY, box.maxZ,0,0,0);
-        this.entity.getWorld().addImportantParticle(ParticleTypes.ANGRY_VILLAGER, box.minX, box.minY, box.minZ,0,0,0);
+
+        Vec3d leftDownPoint = box.getOrigin();
+        Vec3d leftUpPoint = leftDownPoint.add(box.getHeight());
+        Vec3d rightUpPoint = leftUpPoint.add(box.getWidth());
+        Vec3d rightDownPoint = leftDownPoint.add(box.getWidth());
+        Vec3d leftDownFarPoint = leftDownPoint.add(box.getLength());
+        Vec3d leftUpFarPoint = leftDownFarPoint.add(box.getHeight());
+        Vec3d rightUpFarPoint = leftUpFarPoint.add((box.getWidth()));
+        Vec3d rightDownFarPoint = rightUpFarPoint.subtract(box.getHeight());
+
+        this.entity.getWorld().addImportantParticle(ParticleTypes.CAMPFIRE_SIGNAL_SMOKE, leftDownPoint.getX(), leftDownPoint.getY(), leftDownPoint.getZ(), 0, 0, 0);
+        this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, leftUpPoint.getX(), leftUpPoint.getY(), leftUpPoint.getZ(), 0, 0, 0);
+        this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, rightDownPoint.getX(), rightDownPoint.getY(), rightDownPoint.getZ(), 0, 0, 0);
+        this.entity.getWorld().addImportantParticle(ParticleTypes.CAMPFIRE_SIGNAL_SMOKE, rightUpPoint.getX(), rightUpPoint.getY(), rightUpPoint.getZ(), 0, 0, 0);
+        this.entity.getWorld().addImportantParticle(ParticleTypes.CAMPFIRE_SIGNAL_SMOKE, leftDownFarPoint.getX(), leftDownFarPoint.getY(), leftDownFarPoint.getZ(), 0, 0, 0);
+        this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, leftUpFarPoint.getX(), leftUpFarPoint.getY(), leftUpFarPoint.getZ(), 0, 0, 0);
+        this.entity.getWorld().addImportantParticle(ParticleTypes.CAMPFIRE_SIGNAL_SMOKE, rightUpFarPoint.getX(), rightUpFarPoint.getY(), rightUpFarPoint.getZ(), 0, 0, 0);
+        this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, rightDownFarPoint.getX(), rightDownFarPoint.getY(), rightDownFarPoint.getZ(), 0, 0, 0);
+
         System.out.println("origin: " + origin);
-        System.out.println("direction: " + direction);
-        System.out.println("target: " + target);
-        System.out.println("originPointBox: " + originPointBox);
-        System.out.println("targetPointBox: " + targetPointBox);
+        System.out.println("forward direction: " + forwardDirection);
+        System.out.println("up direction: " + upDirection);
+        System.out.println("side direction: " + sideDirection);
         System.out.println("box: " + box);
+        System.out.println("box heightPoint: " + leftUpPoint);
+        System.out.println("box widthPoint: " + rightDownPoint);
+        System.out.println("box lengthPoint: " + leftDownFarPoint);
+        System.out.println("targets: " + entityTargets);
 
         // ToDo DEBUG_END
-
-        // ToDo check distance from this.entity to all entities in list
-        List<Entity> entities = this.entity.getEntityWorld().getOtherEntities(this.entity, box);
-        // filter out all nonliving entities (can be done with stream probably)
-        for (Entity entity1 : entities) {
-            if (entity1 instanceof LivingEntity livingEntity) {
-                entityTargets.add(livingEntity);
-            }
-        }
         return entityTargets;
+    }
+
+    private Vec3d getRotationVec(float pitch, float yaw) {
+        float f = pitch * ((float)Math.PI / 180);
+        float g = -yaw * ((float)Math.PI / 180);
+        float h = MathHelper.cos(g);
+        float i = MathHelper.sin(g);
+        float j = MathHelper.cos(f);
+        float k = MathHelper.sin(f);
+        return new Vec3d(i * j, -k, h * j);
     }
 
     @Override
