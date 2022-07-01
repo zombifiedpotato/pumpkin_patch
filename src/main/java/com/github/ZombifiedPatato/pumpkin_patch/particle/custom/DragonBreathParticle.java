@@ -70,17 +70,62 @@ public class DragonBreathParticle extends SpriteBillboardParticle {
     }
 
     @Environment(value= EnvType.CLIENT)
-    public static class Factory
+    public static class RedFactory
             implements ParticleFactory<DefaultParticleType> {
         private final SpriteProvider spriteProvider;
 
-        public Factory(SpriteProvider spriteProvider) {
+        public RedFactory(SpriteProvider spriteProvider) {
             this.spriteProvider = spriteProvider;
         }
 
         @Override
         public Particle createParticle(DefaultParticleType defaultParticleType, ClientWorld clientWorld, double d, double e, double f, double g, double h, double i) {
-            return new DragonBreathParticle(clientWorld, d, e, f, g, h, i, this.spriteProvider, 0.2f, 0.0f, 0.8f);
+            return new DragonBreathParticle(clientWorld, d, e, f, g, h, i, this.spriteProvider, 1.0f, 0.2745f, 0.0118f);
+        }
+    }
+
+    @Environment(value= EnvType.CLIENT)
+    public static class GreenFactory
+            implements ParticleFactory<DefaultParticleType> {
+        private final SpriteProvider spriteProvider;
+
+        public GreenFactory(SpriteProvider spriteProvider) {
+            this.spriteProvider = spriteProvider;
+        }
+
+        @Override
+        public Particle createParticle(DefaultParticleType defaultParticleType, ClientWorld clientWorld, double d, double e, double f, double g, double h, double i) {
+            return new DragonBreathParticle(clientWorld, d, e, f, g, h, i, this.spriteProvider, 0.2549f, 0.6118f, 0.0902f);
+        }
+    }
+
+    @Environment(value= EnvType.CLIENT)
+    public static class BlueFactory
+            implements ParticleFactory<DefaultParticleType> {
+        private final SpriteProvider spriteProvider;
+
+        public BlueFactory(SpriteProvider spriteProvider) {
+            this.spriteProvider = spriteProvider;
+        }
+
+        @Override
+        public Particle createParticle(DefaultParticleType defaultParticleType, ClientWorld clientWorld, double d, double e, double f, double g, double h, double i) {
+            return new DragonBreathParticle(clientWorld, d, e, f, g, h, i, this.spriteProvider, 0.0118f, 0.6314f, 0.9882f);
+        }
+    }
+
+    @Environment(value= EnvType.CLIENT)
+    public static class BlackFactory
+            implements ParticleFactory<DefaultParticleType> {
+        private final SpriteProvider spriteProvider;
+
+        public BlackFactory(SpriteProvider spriteProvider) {
+            this.spriteProvider = spriteProvider;
+        }
+
+        @Override
+        public Particle createParticle(DefaultParticleType defaultParticleType, ClientWorld clientWorld, double d, double e, double f, double g, double h, double i) {
+            return new DragonBreathParticle(clientWorld, d, e, f, g, h, i, this.spriteProvider, 0.2078f, 0.2275f, 0.2392f);
         }
     }
 }

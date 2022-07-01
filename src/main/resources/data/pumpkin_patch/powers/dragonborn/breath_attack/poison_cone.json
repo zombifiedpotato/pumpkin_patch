@@ -17,6 +17,7 @@
   },
   "setFire": false,
   "damage": 2.5,
-  "isCone": true
+  "isCone": true,
+  "colorInt": 1
 
 }

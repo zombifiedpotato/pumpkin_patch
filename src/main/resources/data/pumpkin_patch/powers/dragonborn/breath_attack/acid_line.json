@@ -16,6 +16,7 @@
     "duration": 100
   },
   "setFire": false,
-  "damage": 2.5
+  "damage": 2.5,
+  "colorInt": 3
 
 }

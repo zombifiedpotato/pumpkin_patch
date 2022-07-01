@@ -15,6 +15,7 @@ import io.github.apace100.calio.data.SerializableDataTypes;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.particle.ParticleEffect;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
@@ -32,8 +33,19 @@ public class BreathWeapon extends CooldownPower implements Active {
     private float damage;
     private boolean isCone;
 
+    private ParticleEffect particle = ModParticles.RED_DRAGON_BREATH;
+
     public void setCone(boolean cone) {
         isCone = cone;
+    }
+
+    public void setColor(int colorInt) {
+        switch (colorInt) {
+            case 0 -> particle = ModParticles.RED_DRAGON_BREATH;
+            case 1 -> particle = ModParticles.GREEN_DRAGON_BREATH;
+            case 2 -> particle = ModParticles.BLUE_DRAGON_BREATH;
+            case 3 -> particle = ModParticles.BLACK_DRAGON_BREATH;
+        }
     }
 
     private Key key;
@@ -65,7 +77,8 @@ public class BreathWeapon extends CooldownPower implements Active {
                         .add("effects", SerializableDataTypes.STATUS_EFFECT_INSTANCES, null)
                         .add("setFire", SerializableDataTypes.BOOLEAN, false)
                         .add("damage", SerializableDataTypes.FLOAT, 0f)
-                        .add("isCone", SerializableDataTypes.BOOLEAN, false),
+                        .add("isCone", SerializableDataTypes.BOOLEAN, false)
+                        .add("colorInt", SerializableDataTypes.INT, 0),
                 data ->
                         (type, player) -> {
                             BreathWeapon power = new BreathWeapon(type, player, data.getInt("cooldown"), data.get("hud_render"));
@@ -82,6 +95,7 @@ public class BreathWeapon extends CooldownPower implements Active {
                             power.setDamage(data.getFloat("damage"));
                             power.setKey(data.get("key"));
                             power.setCone(data.getBoolean("isCone"));
+                            power.setColor(data.getInt("colorInt"));
                             return power;
                         }
         ).allowCondition();
@@ -184,7 +198,7 @@ public class BreathWeapon extends CooldownPower implements Active {
         Random random = new Random();
         for (int i = 0; i < 40; i++) {
             for (int j = 0; j < 10; j++) {
-                world.addParticle(ModParticles.DRAGON_BREATH, originPoint.getX(), originPoint.getY(), originPoint.getZ(),
+                world.addParticle(particle, originPoint.getX(), originPoint.getY(), originPoint.getZ(),
                         localTurnVector.getX() + random.nextDouble() * .01 -.005,
                         localTurnVector.getY() + random.nextDouble() * .01 -.005,
                         localTurnVector.getZ() + random.nextDouble() * .01 -.005);
@@ -207,7 +221,7 @@ public class BreathWeapon extends CooldownPower implements Active {
         Vec3d calculatedForward = forward.normalize().multiply(0.4);
         Random random = new Random();
         for (int i = 0; i < 50; i++) {
-            world.addParticle(ModParticles.DRAGON_BREATH, originPoint.getX(), originPoint.getY(), originPoint.getZ(),
+            world.addParticle(particle, originPoint.getX(), originPoint.getY(), originPoint.getZ(),
                     calculatedForward.getX() + random.nextDouble() * .2 -.1,
                     calculatedForward.getY() + random.nextDouble() * .2 -.1,
                     calculatedForward.getZ() + random.nextDouble() * .2 -.1);

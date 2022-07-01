@@ -12,6 +12,7 @@
   },
   "setFire": true,
   "damage": 3,
-  "isCone": true
+  "isCone": true,
+  "colorInt": 0
 
 }

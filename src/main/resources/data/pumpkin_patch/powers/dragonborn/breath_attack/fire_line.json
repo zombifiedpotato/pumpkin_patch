@@ -11,5 +11,6 @@
     "continous": true
   },
   "setFire": true,
-  "damage": 3
+  "damage": 3,
+  "colorInt": 0
 }
