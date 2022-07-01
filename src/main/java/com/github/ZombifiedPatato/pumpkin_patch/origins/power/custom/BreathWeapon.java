@@ -19,9 +19,11 @@ import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
+import net.minecraft.world.World;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Random;
 
 public class BreathWeapon extends CooldownPower implements Active {
 
@@ -144,6 +146,7 @@ public class BreathWeapon extends CooldownPower implements Active {
                     entityTargets.add(e);
                 }
             }
+            spawnConeParticles(origin, forwardDirection, upDirection, sideDirection);
         } else {
             // Calculate entity list for when shape is line (not cone)
             Vec3d lengthVector = forwardDirection.multiply(15);
@@ -152,39 +155,8 @@ public class BreathWeapon extends CooldownPower implements Active {
             Vec3d originPoint = origin.subtract(widthVector.multiply(0.5)).subtract(heightVector.multiply(0.5));
             box = new Box(originPoint, heightVector, widthVector, lengthVector);
             entityTargets = box.getOtherLivingEntities(entity);
+            spawnLineParticles(origin, lengthVector);
         }
-
-        // ToDo DEBUG_START
-
-        Vec3d leftDownPoint = box.getOrigin();
-        Vec3d leftUpPoint = leftDownPoint.add(box.getHeight());
-        Vec3d rightUpPoint = leftUpPoint.add(box.getWidth());
-        Vec3d rightDownPoint = leftDownPoint.add(box.getWidth());
-        Vec3d leftDownFarPoint = leftDownPoint.add(box.getLength());
-        Vec3d leftUpFarPoint = leftDownFarPoint.add(box.getHeight());
-        Vec3d rightUpFarPoint = leftUpFarPoint.add((box.getWidth()));
-        Vec3d rightDownFarPoint = rightUpFarPoint.subtract(box.getHeight());
-
-        this.entity.getWorld().addImportantParticle(ParticleTypes.CAMPFIRE_SIGNAL_SMOKE, leftDownPoint.getX(), leftDownPoint.getY(), leftDownPoint.getZ(), 0, 0, 0);
-        this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, leftUpPoint.getX(), leftUpPoint.getY(), leftUpPoint.getZ(), 0, 0, 0);
-        this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, rightDownPoint.getX(), rightDownPoint.getY(), rightDownPoint.getZ(), 0, 0, 0);
-        this.entity.getWorld().addImportantParticle(ParticleTypes.CAMPFIRE_SIGNAL_SMOKE, rightUpPoint.getX(), rightUpPoint.getY(), rightUpPoint.getZ(), 0, 0, 0);
-        this.entity.getWorld().addImportantParticle(ParticleTypes.CAMPFIRE_SIGNAL_SMOKE, leftDownFarPoint.getX(), leftDownFarPoint.getY(), leftDownFarPoint.getZ(), 0, 0, 0);
-        this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, leftUpFarPoint.getX(), leftUpFarPoint.getY(), leftUpFarPoint.getZ(), 0, 0, 0);
-        this.entity.getWorld().addImportantParticle(ParticleTypes.CAMPFIRE_SIGNAL_SMOKE, rightUpFarPoint.getX(), rightUpFarPoint.getY(), rightUpFarPoint.getZ(), 0, 0, 0);
-        this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, rightDownFarPoint.getX(), rightDownFarPoint.getY(), rightDownFarPoint.getZ(), 0, 0, 0);
-
-//        System.out.println("origin: " + origin);
-//        System.out.println("forward direction: " + forwardDirection);
-//        System.out.println("up direction: " + upDirection);
-//        System.out.println("side direction: " + sideDirection);
-//        System.out.println("box: " + box);
-//        System.out.println("box heightPoint: " + leftUpPoint);
-//        System.out.println("box widthPoint: " + rightDownPoint);
-//        System.out.println("box lengthPoint: " + leftDownFarPoint);
-//        System.out.println("targets: " + entityTargets);
-
-        // ToDo DEBUG_END
         return entityTargets;
     }
 
@@ -202,6 +174,44 @@ public class BreathWeapon extends CooldownPower implements Active {
         float j = MathHelper.cos(f);
         float k = MathHelper.sin(f);
         return new Vec3d(i * j, -k, h * j);
+    }
+
+    private void spawnConeParticles(Vec3d originPoint, Vec3d forward, Vec3d up, Vec3d side) {
+        World world = this.entity.getWorld();
+        Vec3d localTurnVector = localRotation(up, forward, -1.3963f).normalize().multiply(0.15f);
+        side = localRotation(up, side, -1.3963f).normalize();
+        localTurnVector = localRotation(side, localTurnVector, 0.872665f);
+        Random random = new Random();
+        for (int i = 0; i < 40; i++) {
+            for (int j = 0; j < 10; j++) {
+                world.addParticle(ModParticles.DRAGON_BREATH, originPoint.getX(), originPoint.getY(), originPoint.getZ(),
+                        localTurnVector.getX() + random.nextDouble() * .01 -.005,
+                        localTurnVector.getY() + random.nextDouble() * .01 -.005,
+                        localTurnVector.getZ() + random.nextDouble() * .01 -.005);
+                localTurnVector = localRotation(side, localTurnVector, -0.174533f);
+            }
+            localTurnVector = localRotation(side, localTurnVector, 1.7453f);
+            localTurnVector = localRotation(up, localTurnVector, 0.069813f);
+            side = localRotation(up, side, 0.069813f).normalize();
+        }
+    }
+
+    private Vec3d localRotation (Vec3d direction, Vec3d vector, float angle) {
+        return vector.multiply(Math.cos(angle))
+                .add(direction.crossProduct(vector).multiply(Math.sin(angle)))
+                .add(direction.multiply(direction.dotProduct(vector)).multiply(1-Math.cos(angle)));
+    }
+
+    private void spawnLineParticles(Vec3d originPoint, Vec3d forward) {
+        World world = this.entity.getWorld();
+        Vec3d calculatedForward = forward.normalize().multiply(0.4);
+        Random random = new Random();
+        for (int i = 0; i < 50; i++) {
+            world.addParticle(ModParticles.DRAGON_BREATH, originPoint.getX(), originPoint.getY(), originPoint.getZ(),
+                    calculatedForward.getX() + random.nextDouble() * .2 -.1,
+                    calculatedForward.getY() + random.nextDouble() * .2 -.1,
+                    calculatedForward.getZ() + random.nextDouble() * .2 -.1);
+        }
     }
 
     @Override

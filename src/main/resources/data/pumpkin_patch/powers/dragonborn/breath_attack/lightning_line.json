@@ -1,6 +1,6 @@
 {
-  "name": "Acid Breath Attack",
-  "description": "You have an acid breath attack which shoots acid in a 15 block line.",
+  "name": "Lightning Breath Attack",
+  "description": "You have an lightning breath attack which shoots lightning in a 15 block line.",
   "type": "pumpkin_patch:breath_weapon",
   "cooldown": 300,
   "hud_render": {
@@ -11,11 +11,11 @@
     "continous": true
   },
   "effect": {
-    "effect": "minecraft:wither",
+    "effect": "pumpkin_patch:lightning",
     "amplifier": 2,
     "duration": 100
   },
   "setFire": false,
-  "damage": 2.5
+  "damage": 0
 
 }

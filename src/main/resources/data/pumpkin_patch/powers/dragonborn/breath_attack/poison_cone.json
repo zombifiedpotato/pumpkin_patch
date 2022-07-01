@@ -1,6 +1,6 @@
 {
-  "name": "Acid Breath Attack",
-  "description": "You have an acid breath attack which shoots acid in a 15 block line.",
+  "name": "Poison Breath Attack",
+  "description": "You have a poison breath attack which shoots poison in a 5 block cone.",
   "type": "pumpkin_patch:breath_weapon",
   "cooldown": 300,
   "hud_render": {
@@ -11,11 +11,12 @@
     "continous": true
   },
   "effect": {
-    "effect": "minecraft:wither",
+    "effect": "minecraft:poison",
     "amplifier": 2,
     "duration": 100
   },
   "setFire": false,
-  "damage": 2.5
+  "damage": 2.5,
+  "isCone": true
 
 }

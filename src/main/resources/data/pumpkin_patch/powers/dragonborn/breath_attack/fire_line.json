@@ -1,6 +1,6 @@
 {
   "name": "Fire Breath Attack",
-  "description": "You have a fire breath attack which shoots fire in a 5 block cone",
+  "description": "You have an fire breath attack which shoots fire in a 15 block line.",
   "type": "pumpkin_patch:breath_weapon",
   "cooldown": 300,
   "hud_render": {
@@ -11,7 +11,5 @@
     "continous": true
   },
   "setFire": true,
-  "damage": 3,
-  "isCone": true
-
+  "damage": 3
 }

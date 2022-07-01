@@ -2,6 +2,7 @@ package com.github.ZombifiedPatato.pumpkin_patch;
 
 import com.github.ZombifiedPatato.pumpkin_patch.entity.ModEntities;
 import com.github.ZombifiedPatato.pumpkin_patch.entity.client.FairyPowderRenderer;
+import com.github.ZombifiedPatato.pumpkin_patch.particle.custom.DragonBreathParticle;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -24,6 +25,10 @@ public class PumpkinPatchClient implements ClientModInitializer {
         ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register((((atlasTexture, registry) ->
                 registry.register(new Identifier(PumpkinPatch.MOD_ID, "particle/pink_smoke")))));
         ParticleFactoryRegistry.getInstance().register(ModParticles.PINK_SMOKE, CampfireSmokeParticle.CosySmokeFactory::new);
+
+        ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register(((((atlasTexture, registry) ->
+                registry.register(new Identifier(PumpkinPatch.MOD_ID, "particle/dragon_breath"))))));
+        ParticleFactoryRegistry.getInstance().register(ModParticles.DRAGON_BREATH, DragonBreathParticle.Factory::new);
     }
 
 }
