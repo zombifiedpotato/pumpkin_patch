@@ -17,6 +17,8 @@ import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.particle.ParticleEffect;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
@@ -118,7 +120,9 @@ public class BreathWeapon extends CooldownPower implements Active {
     public void use() {
         LivingEntity e = this.entity;
         List<LivingEntity> targets = getTargets();
-
+        Random random = new Random();
+        e.getWorld().playSoundFromEntity(null, e, SoundEvents.ENTITY_ENDER_DRAGON_GROWL, SoundCategory.PLAYERS,
+                1.5f, 0.8f + random.nextFloat() * 0.3f);
         for (LivingEntity target : targets) {
             if (damage > 0) {
                 target.damage(DamageSource.DRAGON_BREATH, damage);
