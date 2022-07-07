@@ -87,7 +87,7 @@ If you have any suggestions let me know!
     - Carnivor: Because you are half dragon, you only eat meat.
     - Spectrum: You have access to the items from the Spectrum mod!
     - Dragon Wings: You have a pair of permanent dragon wings on your back. The color depends on your subrace.
-    - Breath Weapon: You can use a breath weapon, it's type depending on your subrace. It costs extra food when you use it. (UNDER DEVELOPMENT)
+    - Breath Weapon: You can use a breath weapon, it's type depending on your subrace. It costs extra food when you use it.
     - Elemental: You are resistant to the element of your subrace, but weaker to an other.
   - Suborigins:
     - Black Acid Dragon: Black dragons are the most evil-tempered and vile of chromatic dragons, they collect the wreckage and treasures of fallen peoples.
@@ -130,6 +130,5 @@ If you have any suggestions let me know!
   
   - Sorcerer race and subraces
   
-  - Draconian Breath Weapon (will be added somwhere after first release, don't use breath weapon powers before that if you use custom datapack as the don't work correctly)
   </details>
 
