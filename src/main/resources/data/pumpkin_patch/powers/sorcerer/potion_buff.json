@@ -1,0 +1,19 @@
+{
+  "name": "Potion Buff",
+  "description": "You get a level boost and duration is 20% longer from all status effects, including negative effects.",
+  "type": "origins:multiple",
+  "level_amplifier": {
+    "type": "origins:modify_status_effect_amplifier",
+    "modifier": {
+      "operation": "addition",
+      "value": 1
+    }
+  },
+  "time_amplifier": {
+    "type": "origins:modify_status_effect_duration",
+    "modifier": {
+      "operation": "multiply_total",
+      "value": 0.2
+    }
+  }
+}
