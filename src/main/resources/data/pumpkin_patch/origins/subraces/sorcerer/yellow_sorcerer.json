@@ -1,0 +1,11 @@
+{
+  "powers": [
+
+  ],
+  "icon": {
+    "item": "minecraft:yellow_dye"
+  },
+  "impact": 2,
+  "name": "Yellow Sorcerer",
+  "description": "Cool description."
+}

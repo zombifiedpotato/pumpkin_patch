@@ -54,6 +54,18 @@
         "pumpkin_patch:subraces/dragonborn/blue_lightning",
         "pumpkin_patch:subraces/dragonborn/bronze_lightning"
       ]
+    },
+    {
+      "condition": {
+        "type": "origins:origin",
+        "origin": "pumpkin_patch:races/sorcerer",
+        "layer": "pumpkin_patch:races"
+      },
+      "origins": [
+        "pumpkin_patch:subraces/sorcerer/red_sorcerer",
+        "pumpkin_patch:subraces/sorcerer/blue_sorcerer",
+        "pumpkin_patch:subraces/sorcerer/yellow_sorcerer"
+      ]
     }
   ]
 }
