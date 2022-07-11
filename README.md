@@ -28,7 +28,7 @@ If you have any suggestions let me know!
   - General Powers:
     - Machine: You have been modified to such an extend that you need fuel instead of food to function.
     - Spare Parts: You have more health, since you were designed with redundancy in mind.
-    - Industrial Knowledge: You have acces to the items from the Modern Industrialization mod.  
+    - Industrial Knowledge: You have acces to the items from the Create mod.  
   - Suborigins:
     - War Machine: You have been modified for war, giving you an advantage in hand to hand combat.
       - Armored: You have some armor built in, giving you natural armor points.
@@ -47,7 +47,7 @@ If you have any suggestions let me know!
   - General Powers:
     - Dwarf Size: You are only 60% the size of a human.
     - Strong As Stone: You have natural armor, because your skin is as hard as stone.
-    - Industrial Knowledge: You have acces to the items from the Modern Industrialization mod.
+    - Industrial Knowledge: You have acces to the items from the Create mod.
   - Suborigins:
     - Duergar: The tyrannical duergar, also known as gray dwarves, use there ancient dwarven knowledge and slaves to expand their subterranean kingdoms.
       - Fear Of Slavery: You can intimidate a villager using a lead, giving you better prices.
