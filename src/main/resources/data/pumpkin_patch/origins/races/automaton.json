@@ -1,6 +1,6 @@
 {
 	"powers": [
-		"pumpkin_patch:modern_industrialization",
+		"pumpkin_patch:create",
 		"pumpkin_patch:automaton/machine",
 		"pumpkin_patch:automaton/spare_parts"
 	],
