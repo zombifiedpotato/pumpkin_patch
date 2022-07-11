@@ -1,6 +1,6 @@
 {
 	"powers": [
-		"pumpkin_patch:modern_industrialization",
+		"pumpkin_patch:create",
 		"pumpkin_patch:dwarf/dwarf_size",
 		"pumpkin_patch:dwarf/strong_as_stone"
 	],
