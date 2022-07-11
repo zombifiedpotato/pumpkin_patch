@@ -1,0 +1,6 @@
+{
+  "name": "Industrial Knowledge",
+  "description": "You have access to the items from the Create mod!",
+  "type": "pumpkin_patch:mod_crafting_blocker",
+  "modid": "create"
+}

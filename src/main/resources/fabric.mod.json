@@ -39,7 +39,7 @@
   },
   "recommends": {
     "botania": "",
-    "modern_industrialization": "",
+    "create": "",
     "bewitchment": "",
     "spectrum": "",
     "icarus": ">=1.11",
