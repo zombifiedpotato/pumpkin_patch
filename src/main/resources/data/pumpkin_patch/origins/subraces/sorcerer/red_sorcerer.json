@@ -1,6 +1,7 @@
 {
   "powers": [
-
+    "pumpkin_patch:sorcerer/damage_buff",
+    "pumpkin_patch:sorcerer/health_reduction"
   ],
   "icon": {
     "item": "minecraft:red_dye"

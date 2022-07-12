@@ -1,0 +1,11 @@
+{
+  "name": "Health Reduction",
+  "description": "You have 1,5 less health.",
+  "type": "origins:attribute",
+  "modifier": {
+    "name": "Max health decrease",
+    "attribute": "minecraft:generic.max_health",
+    "operation": "addition",
+    "value": -4
+  }
+}
