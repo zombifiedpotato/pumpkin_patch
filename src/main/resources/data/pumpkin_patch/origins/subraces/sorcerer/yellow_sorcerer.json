@@ -1,11 +1,12 @@
 {
   "powers": [
-
+    "pumpkin_patch:sorcerer/health_increase",
+    "pumpkin_patch:sorcerer/speed_reduction"
   ],
   "icon": {
     "item": "minecraft:yellow_dye"
   },
   "impact": 2,
-  "name": "Yellow Sorcerer",
-  "description": "Cool description."
+  "name": "Sivior",
+  "description": "Sivior sorcerers focuss on the good things in life and use healing magic."
 }
