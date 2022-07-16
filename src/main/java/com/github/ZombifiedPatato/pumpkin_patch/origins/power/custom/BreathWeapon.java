@@ -14,6 +14,7 @@ import io.github.apace100.calio.data.SerializableData;
 import io.github.apace100.calio.data.SerializableDataTypes;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.damage.EntityDamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.particle.ParticleEffect;
 import net.minecraft.particle.ParticleTypes;
@@ -125,7 +126,7 @@ public class BreathWeapon extends CooldownPower implements Active {
                 1.5f, 0.8f + random.nextFloat() * 0.3f);
         for (LivingEntity target : targets) {
             if (damage > 0) {
-                target.damage(DamageSource.DRAGON_BREATH, damage);
+                target.damage(new EntityDamageSource("dragon breath", e), damage);
             }
             if (setFire) {
                 target.setOnFireFor(10);

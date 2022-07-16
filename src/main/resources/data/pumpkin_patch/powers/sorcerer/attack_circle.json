@@ -1,0 +1,20 @@
+{
+  "name": "Attack Circle",
+  "description": "You can magic to damage all entities in a circle around you.",
+  "type": "pumpkin_patch:attack_circle",
+  "cooldown": 300,
+  "hud_render": {
+    "bar_index": 4
+  },
+  "key": {
+    "key": "key.origins.primary_active",
+    "continous": true
+  },
+  "effect": {
+    "effect": "minecraft:weakness",
+    "amplifier": 1,
+    "duration": 600
+  },
+  "setFire": true,
+  "damage": 3
+}
