@@ -16,9 +16,12 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.EntityDamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Vec3d;
+import net.minecraft.world.World;
+import org.lwjgl.system.CallbackI;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -88,8 +91,19 @@ public class AttackCircle extends CooldownPower implements Active {
 
     private void spawnParticles() {
         Vec3d pos = this.entity.getPos();
-        this.entity.getWorld().addImportantParticle(ModParticles.PINK_SMOKE, true, pos.getX(), pos.getY(), pos.getZ(),
-                1,0,0);
+        Vec3d speed = new Vec3d(.2, .1, 0);
+        World world = this.entity.getWorld();
+        for (int i = 0; i < 36; i++){
+            world.addParticle(ParticleTypes.FLAME, true, pos.getX(), pos.getY(), pos.getZ(),
+                    speed.getX(), speed.getY(), speed.getZ());
+            speed = localRotation(new Vec3d(0,1,0), speed, 0.174533f);
+        }
+    }
+
+    private Vec3d localRotation (Vec3d direction, Vec3d vector, float angle) {
+        return vector.multiply(Math.cos(angle))
+                .add(direction.crossProduct(vector).multiply(Math.sin(angle)))
+                .add(direction.multiply(direction.dotProduct(vector)).multiply(1-Math.cos(angle)));
     }
 
     @Override
