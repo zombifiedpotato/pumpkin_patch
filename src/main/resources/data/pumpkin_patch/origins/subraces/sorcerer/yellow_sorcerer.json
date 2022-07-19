@@ -1,7 +1,8 @@
 {
   "powers": [
     "pumpkin_patch:sorcerer/health_increase",
-    "pumpkin_patch:sorcerer/speed_reduction"
+    "pumpkin_patch:sorcerer/speed_reduction",
+    "pumpkin_patch:sorcerer/health_circle"
   ],
   "icon": {
     "item": "minecraft:yellow_dye"

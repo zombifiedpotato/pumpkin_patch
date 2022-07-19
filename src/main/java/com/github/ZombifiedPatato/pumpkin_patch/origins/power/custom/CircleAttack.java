@@ -30,6 +30,7 @@ public class CircleAttack extends CooldownPower implements Active {
     private final List<StatusEffectInstance> userEffects = new LinkedList<>();
     private boolean setFire;
     private float damage;
+    private boolean doDamage;
     private boolean throwAway;
     private float throwPower;
     private float circleRadius;
@@ -52,6 +53,10 @@ public class CircleAttack extends CooldownPower implements Active {
     }
     public void setCircleRadius(float circleRadius) {
         this.circleRadius = circleRadius;
+    }
+
+    public void setDoDamage(boolean doDamage) {
+        this.doDamage = doDamage;
     }
 
     public void addTargetEffect(StatusEffectInstance effect) {
@@ -80,7 +85,9 @@ public class CircleAttack extends CooldownPower implements Active {
     public void use() {
         List<LivingEntity> targets = getTargets();
         for (LivingEntity target : targets) {
-            target.damage(new EntityDamageSource("magic", this.entity), damage);
+            if (doDamage) {
+                target.damage(new EntityDamageSource("magic", this.entity), damage);
+            }
             if (setFire) {
                 target.setOnFireFor(10);
             }
@@ -159,7 +166,8 @@ public class CircleAttack extends CooldownPower implements Active {
                         .add("user_effect", SerializableDataTypes.STATUS_EFFECT_INSTANCE, null)
                         .add("user_effects", SerializableDataTypes.STATUS_EFFECT_INSTANCES, null)
                         .add("throwPower", SerializableDataTypes.FLOAT, .3f)
-                        .add("circle_radius", SerializableDataTypes.FLOAT, 4f),
+                        .add("circle_radius", SerializableDataTypes.FLOAT, 4f)
+                        .add("doDamage", SerializableDataTypes.BOOLEAN, true),
                 data ->
                         (type, player) -> {
                             CircleAttack power = new CircleAttack(type, player, data.getInt("cooldown"), data.get("hud_render"));
@@ -187,6 +195,7 @@ public class CircleAttack extends CooldownPower implements Active {
                             power.setThrowAway(data.getBoolean("throwAway"));
                             power.setThrowPower(data.getFloat("throwPower"));
                             power.setCircleRadius(data.getFloat("circle_radius"));
+                            power.setDoDamage(data.getBoolean("doDamage"));
                             return power;
                         }
         ).allowCondition();
