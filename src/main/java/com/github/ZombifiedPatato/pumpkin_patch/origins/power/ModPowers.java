@@ -1,7 +1,6 @@
 package com.github.ZombifiedPatato.pumpkin_patch.origins.power;
 
-import com.eliotlash.mclib.math.functions.classic.Pow;
-import com.github.ZombifiedPatato.pumpkin_patch.origins.power.custom.AttackCircle;
+import com.github.ZombifiedPatato.pumpkin_patch.origins.power.custom.CircleAttack;
 import com.github.ZombifiedPatato.pumpkin_patch.origins.power.custom.BreathWeapon;
 import com.github.ZombifiedPatato.pumpkin_patch.origins.power.custom.ModCraftingBlocker;
 import com.github.ZombifiedPatato.pumpkin_patch.origins.power.custom.TrinketStarterEquipment;
@@ -15,7 +14,7 @@ public class ModPowers {
     public static final PowerFactory<Power> MOD_CRAFTING_BLOCKER = ModCraftingBlocker.createFactory();
     public static final PowerFactory<Power> BREATH_WEAPON = BreathWeapon.createFactory();
 
-    public static final PowerFactory<Power> ATTACK_CIRCLE = AttackCircle.createFactory();
+    public static final PowerFactory<Power> ATTACK_CIRCLE = CircleAttack.createFactory();
 
     public static void registerPowers() {
         Registry.register(ApoliRegistries.POWER_FACTORY, TRINKET_STARTER_EQUIPMENT.getSerializerId(), TRINKET_STARTER_EQUIPMENT);

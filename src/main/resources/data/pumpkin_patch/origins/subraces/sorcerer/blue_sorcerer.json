@@ -1,7 +1,8 @@
 {
   "powers": [
     "pumpkin_patch:sorcerer/armor_increase",
-    "pumpkin_patch:sorcerer/damage_decrease"
+    "pumpkin_patch:sorcerer/damage_decrease",
+    "pumpkin_patch:sorcerer/defence_circle"
   ],
   "icon": {
     "item": "minecraft:blue_dye"

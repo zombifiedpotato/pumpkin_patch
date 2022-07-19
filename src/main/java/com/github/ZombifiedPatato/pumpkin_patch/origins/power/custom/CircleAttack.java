@@ -1,7 +1,6 @@
 package com.github.ZombifiedPatato.pumpkin_patch.origins.power.custom;
 
 import com.github.ZombifiedPatato.pumpkin_patch.PumpkinPatch;
-import com.github.ZombifiedPatato.pumpkin_patch.particle.ModParticles;
 import io.github.apace100.apoli.data.ApoliDataTypes;
 import io.github.apace100.apoli.power.Active;
 import io.github.apace100.apoli.power.CooldownPower;
@@ -15,23 +14,25 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.EntityDamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
-import org.lwjgl.system.CallbackI;
 
 import java.util.LinkedList;
 import java.util.List;
 
-public class AttackCircle extends CooldownPower implements Active {
+public class CircleAttack extends CooldownPower implements Active {
 
     private Key key;
-    private final List<StatusEffectInstance> effects = new LinkedList<>();
+    private final List<StatusEffectInstance> targetEffects = new LinkedList<>();
+    private final List<StatusEffectInstance> userEffects = new LinkedList<>();
     private boolean setFire;
     private float damage;
+    private boolean throwAway;
+    private float throwPower;
+    private float circleRadius;
 
 
     public void setSetFire(boolean setFire) {
@@ -42,11 +43,26 @@ public class AttackCircle extends CooldownPower implements Active {
         this.damage = damage;
     }
 
-    public void addEffect(StatusEffectInstance effect) {
-        effects.add(effect);
+    public void setThrowAway(boolean throwAway) {
+        this.throwAway = throwAway;
     }
 
-    public AttackCircle(PowerType<?> type, LivingEntity entity, int cooldownDuration, HudRender hudRender) {
+    public void setThrowPower(float throwPower) {
+        this.throwPower = throwPower;
+    }
+    public void setCircleRadius(float circleRadius) {
+        this.circleRadius = circleRadius;
+    }
+
+    public void addTargetEffect(StatusEffectInstance effect) {
+        targetEffects.add(effect);
+    }
+
+    public void addUserEffect(StatusEffectInstance effect) {
+        userEffects.add(effect);
+    }
+
+    public CircleAttack(PowerType<?> type, LivingEntity entity, int cooldownDuration, HudRender hudRender) {
         super(type, entity, cooldownDuration, hudRender);
     }
 
@@ -68,18 +84,31 @@ public class AttackCircle extends CooldownPower implements Active {
             if (setFire) {
                 target.setOnFireFor(10);
             }
-            for (StatusEffectInstance effect : effects) {
+            if (throwAway) {
+                throwTarget(target);
+            }
+            for (StatusEffectInstance effect : targetEffects) {
                 target.setStatusEffect(new StatusEffectInstance(effect), this.entity);
             }
+        }
+        for (StatusEffectInstance effect : userEffects) {
+            this.entity.setStatusEffect(new StatusEffectInstance(effect), this.entity);
         }
         spawnParticles();
         super.use();
     }
 
+    private void throwTarget(LivingEntity target) {
+        Vec3d pos = this.entity.getPos();
+        Vec3d targetPos = target.getEyePos();
+        Vec3d throwVector = targetPos.subtract(pos).multiply(throwPower);
+        target.setVelocity(throwVector);
+    }
+
     private List<LivingEntity> getTargets() {
         Vec3d origin = this.entity.getPos();
         List<LivingEntity> targets = new LinkedList<>();
-        Box box = new Box(origin.add(4, 4, 4), origin.add(-4,-4,-4));
+        Box box = new Box(origin.add(circleRadius, circleRadius, circleRadius), origin.add(-circleRadius,-circleRadius,-circleRadius));
         List<Entity> list = this.entity.getEntityWorld().getOtherEntities(this.entity, box, entity1 -> this.entity.distanceTo(entity1) <= 4);
         for (Entity e : list) {
             if (e instanceof LivingEntity living) {
@@ -91,7 +120,7 @@ public class AttackCircle extends CooldownPower implements Active {
 
     private void spawnParticles() {
         Vec3d pos = this.entity.getPos();
-        Vec3d speed = new Vec3d(.2, .1, 0);
+        Vec3d speed = new Vec3d(circleRadius * .05, .1, 0);
         World world = this.entity.getWorld();
         for (int i = 0; i < 36; i++){
             world.addParticle(ParticleTypes.FLAME, true, pos.getX(), pos.getY(), pos.getZ(),
@@ -117,30 +146,47 @@ public class AttackCircle extends CooldownPower implements Active {
     }
 
     public static PowerFactory<Power> createFactory() {
-        return new PowerFactory<>(new Identifier(PumpkinPatch.MOD_ID, "attack_circle"),
+        return new PowerFactory<>(new Identifier(PumpkinPatch.MOD_ID, "circle_attack"),
                 new SerializableData()
                         .add("cooldown", SerializableDataTypes.INT, 1)
                         .add("hud_render", ApoliDataTypes.HUD_RENDER, HudRender.DONT_RENDER)
                         .add("key", ApoliDataTypes.BACKWARDS_COMPATIBLE_KEY, new Active.Key())
-                        .add("effect", SerializableDataTypes.STATUS_EFFECT_INSTANCE, null)
-                        .add("effects", SerializableDataTypes.STATUS_EFFECT_INSTANCES, null)
+                        .add("target_effect", SerializableDataTypes.STATUS_EFFECT_INSTANCE, null)
+                        .add("target_effects", SerializableDataTypes.STATUS_EFFECT_INSTANCES, null)
                         .add("setFire", SerializableDataTypes.BOOLEAN, false)
-                        .add("damage", SerializableDataTypes.FLOAT, 0f),
+                        .add("damage", SerializableDataTypes.FLOAT, 0f)
+                        .add("throwAway", SerializableDataTypes.BOOLEAN, false)
+                        .add("user_effect", SerializableDataTypes.STATUS_EFFECT_INSTANCE, null)
+                        .add("user_effects", SerializableDataTypes.STATUS_EFFECT_INSTANCES, null)
+                        .add("throwPower", SerializableDataTypes.FLOAT, .3f)
+                        .add("circle_radius", SerializableDataTypes.FLOAT, 4f),
                 data ->
                         (type, player) -> {
-                            AttackCircle power = new AttackCircle(type, player, data.getInt("cooldown"), data.get("hud_render"));
-                            if (data.isPresent("effect")) {
-                                power.addEffect(data.get("effect"));
+                            CircleAttack power = new CircleAttack(type, player, data.getInt("cooldown"), data.get("hud_render"));
+                            if (data.isPresent("target_effect")) {
+                                power.addTargetEffect(data.get("target_effect"));
                             }
-                            if (data.isPresent("effects")) {
-                                List<StatusEffectInstance> effects = data.get("effects");
+                            if (data.isPresent("target_effects")) {
+                                List<StatusEffectInstance> effects = data.get("target_effects");
                                 for (StatusEffectInstance effect : effects) {
-                                    power.addEffect(effect);
+                                    power.addTargetEffect(effect);
+                                }
+                            }
+                            if (data.isPresent("user_effect")) {
+                                power.addUserEffect(data.get("user_effect"));
+                            }
+                            if (data.isPresent("user_effects")) {
+                                List<StatusEffectInstance> effects = data.get("user_effects");
+                                for (StatusEffectInstance effect : effects) {
+                                    power.addUserEffect(effect);
                                 }
                             }
                             power.setSetFire(data.getBoolean("setFire"));
                             power.setDamage(data.getFloat("damage"));
                             power.setKey(data.get("key"));
+                            power.setThrowAway(data.getBoolean("throwAway"));
+                            power.setThrowPower(data.getFloat("throwPower"));
+                            power.setCircleRadius(data.getFloat("circle_radius"));
                             return power;
                         }
         ).allowCondition();
