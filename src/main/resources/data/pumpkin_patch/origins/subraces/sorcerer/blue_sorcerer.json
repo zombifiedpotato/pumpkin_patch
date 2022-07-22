@@ -1,0 +1,13 @@
+{
+  "powers": [
+    "pumpkin_patch:sorcerer/armor_increase",
+    "pumpkin_patch:sorcerer/damage_decrease",
+    "pumpkin_patch:sorcerer/defence_circle"
+  ],
+  "icon": {
+    "item": "minecraft:blue_dye"
+  },
+  "impact": 2,
+  "name": "Usorin",
+  "description": "Usorin sorcerers focus on defensive magic to protect themselves and those that they love."
+}

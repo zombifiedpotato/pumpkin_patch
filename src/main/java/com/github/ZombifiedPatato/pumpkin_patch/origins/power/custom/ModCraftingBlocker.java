@@ -33,7 +33,7 @@ public class ModCraftingBlocker extends Power {
         return modids.contains(namespace);
     }
 
-    public static PowerFactory createFactory() {
+    public static PowerFactory<Power> createFactory() {
         return new PowerFactory<>(new Identifier(PumpkinPatch.MOD_ID, "mod_crafting_blocker"),
                 new SerializableData()
                         .add("modids", SerializableDataTypes.STRINGS, null)

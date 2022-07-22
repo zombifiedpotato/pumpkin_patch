@@ -1,0 +1,13 @@
+{
+  "powers": [
+    "pumpkin_patch:sorcerer/damage_buff",
+    "pumpkin_patch:sorcerer/health_reduction",
+    "pumpkin_patch:sorcerer/attack_circle"
+  ],
+  "icon": {
+    "item": "minecraft:red_dye"
+  },
+  "impact": 2,
+  "name": "Arnas",
+  "description": "Arnas sorcerers are very aggressive and focus their magic on attacking."
+}

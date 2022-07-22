@@ -1,0 +1,11 @@
+{
+  "name": "Damage Reduction",
+  "description": "You deal 15% less melee damage.",
+  "type": "origins:attribute",
+  "modifier": {
+    "name": "damage decrease",
+    "attribute": "minecraft:generic.attack_damage",
+    "operation": "multiply_total",
+    "value": -0.15
+  }
+}

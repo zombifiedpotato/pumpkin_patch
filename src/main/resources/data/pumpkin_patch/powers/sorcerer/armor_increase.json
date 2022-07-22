@@ -1,0 +1,11 @@
+{
+  "name": "Armor Increase",
+  "description": "You have some natural armor.",
+  "type": "origins:attribute",
+  "modifier": {
+    "name": "Armor increase",
+    "attribute": "minecraft:generic.armor",
+    "operation": "addition",
+    "value": 4
+  }
+}
