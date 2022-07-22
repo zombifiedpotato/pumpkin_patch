@@ -7,6 +7,7 @@
     "pumpkin_patch:races/nymph",
     "pumpkin_patch:races/dragonborn",
     "pumpkin_patch:races/sorcerer",
-    "pumpkin_patch:races/aarakocra"
+    "pumpkin_patch:races/aarakocra",
+    "origins:merling"
   ]
 }
