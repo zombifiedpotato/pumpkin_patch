@@ -2,7 +2,9 @@
   "powers": [
     "pumpkin_patch:aarakocra/wings",
     "pumpkin_patch:aarakocra/bigger",
-    "pumpkin_patch:aarakocra/temp_subrace_buff",
+    "origins:aerial_combatant",
+    "origins:launch_into_air",
+    "origins:claustrophobia",
     "pumpkin_patch:botania_bewitchment"
   ],
   "icon": {
