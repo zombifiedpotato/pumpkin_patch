@@ -1,0 +1,6 @@
+{
+  "name": "Big Bird",
+  "description": "You’re slightly taller than humans and have slightly further reach.",
+  "type": "extraorigins:modify_size",
+  "scale": 1.4
+}
