@@ -1,0 +1,11 @@
+{
+  "name": "Relaxed Movement",
+  "description": "Your relaxed way of living makes you move slower",
+  "type": "origins:attribute",
+  "modifier": {
+    "name": "movement decrease",
+    "attribute": "minecraft:generic.movement_speed",
+    "operation": "addition",
+    "value": -0.02
+  }
+}

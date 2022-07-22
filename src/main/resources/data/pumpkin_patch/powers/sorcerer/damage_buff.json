@@ -1,0 +1,11 @@
+{
+  "name": "Damage Increase",
+  "description": "You deal 15 percent more melee damage",
+  "type": "origins:attribute",
+  "modifier": {
+    "name": "strength increase",
+    "attribute": "minecraft:generic.attack_damage",
+    "operation": "multiply_total",
+    "value": 0.15
+  }
+}

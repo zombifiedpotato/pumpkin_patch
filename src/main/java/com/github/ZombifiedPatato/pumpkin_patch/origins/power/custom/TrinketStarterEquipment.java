@@ -62,7 +62,7 @@ public class TrinketStarterEquipment extends Power {
         }
     }
 
-    public static PowerFactory createFactory() {
+    public static PowerFactory<Power> createFactory() {
         return new PowerFactory<>(new Identifier(PumpkinPatch.MOD_ID, "starting_equipment"),
                 new SerializableData()
                         .add("stack", ApoliDataTypes.POSITIONED_ITEM_STACK, null)

@@ -11,6 +11,7 @@ public class ModParticles {
 
     public static final DefaultParticleType PINK_SMOKE = Registry.register(
             Registry.PARTICLE_TYPE, new Identifier(PumpkinPatch.MOD_ID, "pink_smoke"), FabricParticleTypes.simple(true));
+
     public static final DefaultParticleType RED_DRAGON_BREATH = Registry.register(
             Registry.PARTICLE_TYPE, new Identifier(PumpkinPatch.MOD_ID, "red_dragon_breath"), FabricParticleTypes.simple(true));
     public static final DefaultParticleType GREEN_DRAGON_BREATH = Registry.register(

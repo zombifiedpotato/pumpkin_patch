@@ -1,0 +1,16 @@
+{
+  "powers": [
+    "pumpkin_patch:aarakocra/wings",
+    "pumpkin_patch:aarakocra/bigger",
+    "origins:aerial_combatant",
+    "origins:launch_into_air",
+    "origins:claustrophobia",
+    "pumpkin_patch:botania_bewitchment"
+  ],
+  "icon": {
+    "item": "icarus:light_grey_feathered_wings"
+  },
+  "impact": 2,
+  "name": "Aarakocra",
+  "description": "Aarakocra are big humanoid birds, which are proficient in the magic of nature."
+}
