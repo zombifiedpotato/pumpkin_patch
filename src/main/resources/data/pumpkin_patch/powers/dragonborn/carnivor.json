@@ -6,20 +6,11 @@
     "type": "origins:and",
     "conditions": [
       {
-        "type": "origins:or",
-        "conditions": [
-          {
-            "type": "origins:ingredient",
-            "ingredient": {
-              "tag": "origins:meat"
-            },
-            "inverted": true
-          },
-          {
-            "type": "origins:meat",
-            "inverted": true
-          }
-        ]
+        "type": "origins:ingredient",
+        "ingredient": {
+          "tag": "origins:meat"
+        },
+        "inverted": true
       },
       {
         "type": "origins:food"

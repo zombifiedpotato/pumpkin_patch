@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "betteranimalsplus:pheasantcooked",
+    "betteranimalsplus:pheasantraw",
+    "betteranimalsplus:crab_meat_raw",
+    "betteranimalsplus:crab_meat_cooked",
+    "betteranimalsplus:venisoncooked",
+    "betteranimalsplus:venisonraw",
+    "betteranimalsplus:turkey_cooked",
+    "betteranimalsplus:turkey_raw",
+    "betteranimalsplus:turkey_leg_raw",
+    "betteranimalsplus:turkey_leg_cooked",
+    "betteranimalsplus:eel_meat_raw",
+    "betteranimalsplus:eel_meat_cooked",
+    "betteranimalsplus:calamari_raw",
+    "betteranimalsplus:calamari_cooked"
+  ]
+}
