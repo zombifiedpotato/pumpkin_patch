@@ -9,8 +9,8 @@
     "zombified_patato"
   ],
   "contact": {
-    "homepage": "https://github.com/ZombifiedPatato/pumpkin_patch",
-    "sources": "https://github.com/ZombifiedPatato/pumpkin_patch"
+    "homepage": "https://github.com/zombifiedpotato/pumpkin_patch",
+    "sources": "https://github.com/zombifiedpotato/pumpkin_patch"
   },
 
   "license": "MIT",
@@ -19,10 +19,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.github.ZombifiedPatato.pumpkin_patch.PumpkinPatch"
+      "com.github.zombifiedpotato.pumpkin_patch.PumpkinPatch"
     ],
     "client": [
-      "com.github.ZombifiedPatato.pumpkin_patch.PumpkinPatchClient"
+      "com.github.zombifiedpotato.pumpkin_patch.PumpkinPatchClient"
     ]
   },
   "mixins": [
