@@ -4,9 +4,9 @@
   "version": "${version}",
 
   "name": "Pumpkin Patch",
-  "description": "This is an mod for the PumpkinPatch MC Server which adds extra content!",
+  "description": "This is the configuration mod for the Pumpkin Patch SMP pack!",
   "authors": [
-    "zombified_patato"
+    "zombified_potato"
   ],
   "contact": {
     "homepage": "https://github.com/zombifiedpotato/pumpkin_patch",
@@ -19,10 +19,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.github.zombifiedpotato.pumpkin_patch.PumpkinPatch"
-    ],
-    "client": [
-      "com.github.zombifiedpotato.pumpkin_patch.PumpkinPatchClient"
+      "com.github.zombifiedpotato.pumpkin_patch.Main"
     ]
   },
   "mixins": [
@@ -34,15 +31,13 @@
     "fabric": "*",
     "minecraft": "1.18.x",
     "java": ">=17",
-    "origins": ">=1.4.1",
-    "trinkets": ">=3.3.0"
+    "pehkui": ">=3.4.2",
+    "extra_origin_powers": ">=1.0.0"
   },
   "recommends": {
-    "botania": "",
     "create": "",
+    "botania": "",
     "bewitchment": "",
-    "spectrum": "",
-    "icarus": ">=1.11",
-    "extraorigins": ">=1.18-10"
+    "spectrum": ""
   }
 }
