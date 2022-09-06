@@ -1,7 +1,7 @@
 {
   "name": "Grey Dragon Wings",
   "description": "You have permanent grey dragon wings.",
-  "type": "pumpkin_patch:starting_equipment",
+  "type": "extra_origin_powers:starting_equipment",
   "stacks": [
     {
       "item": "icarus:grey_dragon_wings",

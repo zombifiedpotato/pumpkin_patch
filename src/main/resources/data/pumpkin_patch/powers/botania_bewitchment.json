@@ -1,7 +1,7 @@
 {
   "name": "Knowledge Of Nature",
   "description": "You have access to the items from the botania and bewitchment mods!",
-  "type": "pumpkin_patch:mod_crafting_blocker",
+  "type": "extra_origin_powers:mod_crafting_blocker",
   "modids": [
     "botania",
     "bewitchment"

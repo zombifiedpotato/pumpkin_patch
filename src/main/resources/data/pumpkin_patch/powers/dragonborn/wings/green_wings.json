@@ -1,7 +1,7 @@
 {
   "name": "Green Dragon Wings",
   "description": "You have permanent green dragon wings.",
-  "type": "pumpkin_patch:starting_equipment",
+  "type": "extra_origin_powers:starting_equipment",
   "stacks": [
     {
       "item": "icarus:green_dragon_wings",

@@ -4,7 +4,7 @@
   "type": "origins:multiple",
   "wither_resistance_amplifier": {
     "type": "origins:modify_status_effect_amplifier",
-    "status_effect": "pumpkin_patch:lightning",
+    "status_effect": "fantastical_additions:lightning",
     "modifier": {
       "operation": "addition",
       "value": -2
@@ -12,7 +12,7 @@
   },
   "wither_resistance_duration": {
     "type": "origins:modify_status_effect_duration",
-    "status_effect": "pumpkin_patch:lightning",
+    "status_effect": "fantastical_additions:lightning",
     "modifier": {
       "operation": "multiply_total",
       "value": -0.5

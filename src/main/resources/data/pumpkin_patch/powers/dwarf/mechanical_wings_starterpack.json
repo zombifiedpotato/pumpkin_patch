@@ -1,6 +1,6 @@
 {
   "hidden": true,
-  "type": "pumpkin_patch:starting_equipment",
+  "type": "extra_origin_powers:starting_equipment",
   "stacks": [
     {
       "item": "minecraft:written_book",

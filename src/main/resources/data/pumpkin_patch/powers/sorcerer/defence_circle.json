@@ -1,7 +1,7 @@
 {
   "name": "Defence Circle",
   "description": "You can use magic to defend yourself against all entities in a circle around you.",
-  "type": "pumpkin_patch:circle_attack",
+  "type": "extra_origin_powers:circle_attack",
   "cooldown": 300,
   "hud_render": {
     "bar_index": 4

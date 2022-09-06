@@ -1,7 +1,7 @@
 {
   "name": "Red Dragon Wings",
   "description": "You have permanent red dragon wings.",
-  "type": "pumpkin_patch:starting_equipment",
+  "type": "extra_origin_powers:starting_equipment",
   "stacks": [
     {
       "item": "icarus:red_dragon_wings",

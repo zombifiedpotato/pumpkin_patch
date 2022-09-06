@@ -18,7 +18,7 @@
       ]
   },
   "condition": {
-      "type": "pumpkin_patch:entity_type_in_range",
+      "type": "extra_origin_powers:entity_type_in_range",
     "radius": 8,
       "entity_types": [
         "minecraft:sheep",

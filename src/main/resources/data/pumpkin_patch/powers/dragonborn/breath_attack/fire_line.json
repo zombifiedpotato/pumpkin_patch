@@ -1,7 +1,7 @@
 {
   "name": "Fire Breath Attack",
   "description": "You have an fire breath attack which shoots fire in a 15 block line.",
-  "type": "pumpkin_patch:breath_weapon",
+  "type": "extra_origin_powers:breath_weapon",
   "cooldown": 300,
   "hud_render": {
     "bar_index": 4

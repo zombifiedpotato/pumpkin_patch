@@ -1,7 +1,7 @@
 {
   "name": "Bird Wings",
   "description": "You have permanent bird wings.",
-  "type": "pumpkin_patch:starting_equipment",
+  "type": "extra_origin_powers:starting_equipment",
   "stacks": [
     {
       "item": "icarus:light_grey_feathered_wings",

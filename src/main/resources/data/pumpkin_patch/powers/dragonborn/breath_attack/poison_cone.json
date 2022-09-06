@@ -1,7 +1,7 @@
 {
   "name": "Poison Breath Attack",
   "description": "You have a poison breath attack which shoots poison in a 5 block cone.",
-  "type": "pumpkin_patch:breath_weapon",
+  "type": "extra_origin_powers:breath_weapon",
   "cooldown": 300,
   "hud_render": {
     "bar_index": 4

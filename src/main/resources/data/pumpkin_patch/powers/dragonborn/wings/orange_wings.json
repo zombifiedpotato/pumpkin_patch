@@ -1,7 +1,7 @@
 {
   "name": "Orange Dragon Wings",
   "description": "You have permanent orange dragon wings.",
-  "type": "pumpkin_patch:starting_equipment",
+  "type": "extra_origin_powers:starting_equipment",
   "stacks": [
     {
       "item": "icarus:orange_dragon_wings",
