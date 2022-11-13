@@ -38,6 +38,7 @@ dependencies {
 		exclude group: "net.fabricmc.fabric-api"
 	})
 	modImplementation "com.github.zombifiedpotato:extra_origin_powers:${extra_origin_powers_version}"
+	modImplementation "com.github.zombifiedpotato:fantastical_additions:${fantastical_additions_version}"
 }
 
 processResources {

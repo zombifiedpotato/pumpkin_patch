@@ -32,7 +32,8 @@
     "minecraft": "1.18.x",
     "java": ">=17",
     "pehkui": ">=3.4.2",
-    "extra_origin_powers": ">=1.0.0"
+    "extra_origin_powers": ">=1.0.0",
+    "fantastical_additions": ">=1.0.1"
   },
   "recommends": {
     "create": "",

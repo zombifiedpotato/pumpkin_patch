@@ -4,6 +4,104 @@
   "type": "origins:multiple",
   "level_amplifier": {
     "type": "origins:modify_status_effect_amplifier",
+    "status_effects": [
+      {
+        "status_effect": "minecraft:absorption"
+      },
+      {
+        "status_effect": "minecraft:bad_omen"
+      },
+      {
+        "status_effect": "minecraft:blindness"
+      },
+      {
+        "status_effect": "minecraft:conduit_power"
+      },
+      {
+        "status_effect": "minecraft:dolphins_grace"
+      },
+      {
+        "status_effect": "minecraft:fire_resistance"
+      },
+      {
+        "status_effect": "minecraft:glowing"
+      },
+      {
+        "status_effect": "minecraft:haste"
+      },
+      {
+        "status_effect": "minecraft:health_boost"
+      },
+      {
+        "status_effect": "minecraft:hero_of_the_village"
+      },
+      {
+        "status_effect": "minecraft:hunger"
+      },
+      {
+        "status_effect": "minecraft:instant_damage"
+      },
+      {
+        "status_effect": "minecraft:instant_health"
+      },
+      {
+        "status_effect": "minecraft:invisibility"
+      },
+      {
+        "status_effect": "minecraft:jump_boost"
+      },
+      {
+        "status_effect": "minecraft:levitation"
+      },
+      {
+        "status_effect": "minecraft:luck"
+      },
+      {
+        "status_effect": "minecraft:mining_fatigue"
+      },
+      {
+        "status_effect": "minecraft:nausea"
+      },
+      {
+        "status_effect": "minecraft:night_vision"
+      },
+      {
+        "status_effect": "minecraft:poison"
+      },
+      {
+        "status_effect": "minecraft:regeneration"
+      },
+      {
+        "status_effect": "minecraft:resistance"
+      },
+      {
+        "status_effect": "minecraft:saturation"
+      },
+      {
+        "status_effect": "minecraft:slow_falling"
+      },
+      {
+        "status_effect": "minecraft:slowness"
+      },
+      {
+        "status_effect": "minecraft:speed"
+      },
+      {
+        "status_effect": "minecraft:strength"
+      },
+      {
+        "status_effect": "minecraft:unluck"
+      },
+      {
+        "status_effect": "minecraft:water_breathing"
+      },
+      {
+        "status_effect": "minecraft:weakness"
+      },
+      {
+        "status_effect": "minecraft:wither"
+      }
+    ],
     "modifier": {
       "operation": "addition",
       "value": 1
@@ -11,6 +109,104 @@
   },
   "time_amplifier": {
     "type": "origins:modify_status_effect_duration",
+    "status_effects": [
+      {
+        "status_effect": "minecraft:absorption"
+      },
+      {
+        "status_effect": "minecraft:bad_omen"
+      },
+      {
+        "status_effect": "minecraft:blindness"
+      },
+      {
+        "status_effect": "minecraft:conduit_power"
+      },
+      {
+        "status_effect": "minecraft:dolphins_grace"
+      },
+      {
+        "status_effect": "minecraft:fire_resistance"
+      },
+      {
+        "status_effect": "minecraft:glowing"
+      },
+      {
+        "status_effect": "minecraft:haste"
+      },
+      {
+        "status_effect": "minecraft:health_boost"
+      },
+      {
+        "status_effect": "minecraft:hero_of_the_village"
+      },
+      {
+        "status_effect": "minecraft:hunger"
+      },
+      {
+        "status_effect": "minecraft:instant_damage"
+      },
+      {
+        "status_effect": "minecraft:instant_health"
+      },
+      {
+        "status_effect": "minecraft:invisibility"
+      },
+      {
+        "status_effect": "minecraft:jump_boost"
+      },
+      {
+        "status_effect": "minecraft:levitation"
+      },
+      {
+        "status_effect": "minecraft:luck"
+      },
+      {
+        "status_effect": "minecraft:mining_fatigue"
+      },
+      {
+        "status_effect": "minecraft:nausea"
+      },
+      {
+        "status_effect": "minecraft:night_vision"
+      },
+      {
+        "status_effect": "minecraft:poison"
+      },
+      {
+        "status_effect": "minecraft:regeneration"
+      },
+      {
+        "status_effect": "minecraft:resistance"
+      },
+      {
+        "status_effect": "minecraft:saturation"
+      },
+      {
+        "status_effect": "minecraft:slow_falling"
+      },
+      {
+        "status_effect": "minecraft:slowness"
+      },
+      {
+        "status_effect": "minecraft:speed"
+      },
+      {
+        "status_effect": "minecraft:strength"
+      },
+      {
+        "status_effect": "minecraft:unluck"
+      },
+      {
+        "status_effect": "minecraft:water_breathing"
+      },
+      {
+        "status_effect": "minecraft:weakness"
+      },
+      {
+        "status_effect": "minecraft:wither"
+      }
+    ],
     "modifier": {
       "operation": "multiply_total",
       "value": 0.2
