@@ -33,7 +33,7 @@
     "java": ">=17",
     "pehkui": ">=3.4.2",
     "extra_origin_powers": ">=1.0.0",
-    "fantastical_additions": ">=1.0.1"
+    "fantastical_additions": ">=1.0.2"
   },
   "recommends": {
     "create": "",
